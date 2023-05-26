@@ -70,9 +70,9 @@ function hammerInit(){
     }
 
     // Expose to window namespace for testing purposes
-    window.panZoom = svgPanZoom('#mobile-svg', {
+    window.panZoom = svgPanZoom('#svg-container', {
       zoomEnabled: true
-    , controlIconsEnabled: true
+    , controlIconsEnabled: false
     , fit: 1
     , center: 1
     , customEventsHandler: eventsHandler
