@@ -1,7 +1,11 @@
 // svg-pan-zoom v3.6.0
 // https://github.com/ariutta/svg-pan-zoom
+
+var xPos=0, yPos=0, prevX=0, prevY=0;
+
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-    var svgPanZoom = require('./svg-pan-zoom.js');
+  
+  var svgPanZoom = require('./svg-pan-zoom.js');
     
     // UMD module definition
     (function(window, document){
@@ -507,20 +511,21 @@
     , mouseWheelZoomEnabled: true // enable or disable zooming by mouse wheel (default enabled)
     , preventMouseEventsDefault: true // enable or disable preventDefault for mouse events
     , zoomScaleSensitivity: 0.1 // Zoom sensitivity
-    , minZoom: 0.5 // Minimum Zoom level
-    , maxZoom: 10 // Maximum Zoom level
-    , fit: true // enable or disable viewport fit in SVG (default true)
-    , contain: false // enable or disable viewport contain the svg (default false)
+    , minZoom: 1 // Minimum Zoom level
+    , maxZoom: 15 // Maximum Zoom level
+    , fit: false // enable or disable viewport fit in SVG (default true)
+    , contain: true // enable or disable viewport contain the svg (default false)
     , center: true // enable or disable viewport centering in SVG (default true)
-    , refreshRate: 'auto' // Maximum number of frames per second (altering SVG's viewport)
+    , refreshRate: '60' // Maximum number of frames per second (altering SVG's viewport)
     , beforeZoom: null
     , onZoom: null
     , beforePan: null
-    , onPan: null
+    , onPan: checkBorder
     , customEventsHandler: null
     , eventsListenerElement: null
     , onUpdatedCTM: null
     }
+
     
     var passiveListenerOption = {passive: true};
     
@@ -1411,9 +1416,15 @@
        * @param {SVGElement} defs
        */
     , setCTM: function(element, matrix, defs) {
-        var that = this
-          , s = 'matrix(' + matrix.a + ',' + matrix.b + ',' + matrix.c + ',' + matrix.d + ',' + matrix.e + ',' + matrix.f + ')';
     
+        var that = this;
+      
+          var s = 'matrix(' + matrix.a + ',' + matrix.b + ',' + matrix.c + ',' + matrix.d + ',' + matrix.e + ',' + matrix.f + ')';
+         
+          
+          
+            
+        
         element.setAttributeNS(null, 'transform', s);
         if ('transform' in element.style) {
           element.style.transform = s;
