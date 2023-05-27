@@ -510,7 +510,7 @@ var xPos=0, yPos=0, prevX=0, prevY=0;
     , dblClickZoomEnabled: true // enable or disable zooming by double clicking (default enabled)
     , mouseWheelZoomEnabled: true // enable or disable zooming by mouse wheel (default enabled)
     , preventMouseEventsDefault: true // enable or disable preventDefault for mouse events
-    , zoomScaleSensitivity: 0.1 // Zoom sensitivity
+    , zoomScaleSensitivity: 0.2 // Zoom sensitivity
     , minZoom: 1 // Minimum Zoom level
     , maxZoom: 15 // Maximum Zoom level
     , fit: false // enable or disable viewport fit in SVG (default true)
@@ -518,7 +518,7 @@ var xPos=0, yPos=0, prevX=0, prevY=0;
     , center: true // enable or disable viewport centering in SVG (default true)
     , refreshRate: '60' // Maximum number of frames per second (altering SVG's viewport)
     , beforeZoom: null
-    , onZoom: null
+    , onZoom: checkBorder
     , beforePan: null
     , onPan: checkBorder
     , customEventsHandler: null
