@@ -35,7 +35,7 @@ function zoomCallback(){
 var pins = document.getElementsByClassName("pin");
 var height=$("#map").height(), width=$("#map").width();
 
-pinSize=panZoom.getSizes().height/10;
+pinSize=document.getElementById("map").getBBox().height/10;
 
     for(var i=0; i<pins.length; i++){
         pins[i].setAttribute("height",pinSize/panZoom.getZoom());
