@@ -40,18 +40,67 @@ pins[i].setAttribute("y",pins[i].getAttribute("ypos")*height+(panZoom.getSizes()
 }
 
 var targetPin, mouseX, mouseY, mousePrevX, mousePrevY;
+var info, allInfos, allMedias, allCloses;
 
 window.addEventListener("mouseup", openPin)
 
 
 function setTargetPin(e){
-   targetPin=this;
+   targetPin=this.getAttribute("name");
     mouseX=e.clientX;
     mouseY=e.clientY;
  }
 
  function openPin(e){
+     allInfos=document.getElementsByClassName("info-container");
+      allMedias=document.getElementsByClassName("info-media");
+       allCloses=document.getElementsByClassName("info-close");
     if(Math.abs(mouseX-e.clientX)<5&&Math.abs(mouseY-e.clientY)<5){
-    panZoom.resetZoom();
+        console.log(targetPin);
+    for(var i=0; i<allInfos.length;i++){
+        console.log(allInfos[i].getAttribute("name"));
+        if(allInfos[i].getAttribute("name")==targetPin){
+            info=i;
+        }
     }
+    document.getElementById("info").style.display="flex";
+    document.getElementById("info").style.animation="opacityIn 0.2s linear 0s";
+    allCloses[info].style.display="none";
+    setTimeout(function(){
+        document.getElementById("info-animate").style.display="flex";
+        document.getElementById("info-animate").style.animation="infoIn 0.5s ease 0s";
+    },200);
+    setTimeout(function(){
+        allInfos[info].style.display="flex";
+        allInfos[info].style.overflow="hidden";
+       allInfos[info].style.animation="infoIn 0.5s ease 0s";
+    },700);
+    setTimeout(function(){
+    allCloses[info].style.display="block";
+       allMedias[info].style.animation="opacityIn 0.2s linear 0s";
+       allCloses[info].style.animation="opacityIn 0.2s linear 0s";
+       allInfos[info].style.overflow="auto";
+    },1200);
+    
+    
+
+    }
+
+ 
+ }
+ function closePin(){
+    document.getElementById("info").style.animation="opacityOut 0.2s linear 0s";
+    document.getElementById("info-animate").style.animation="opacityOut 0s linear 0s";
+    allInfos[info].style.animation="opacityOut 0.2s linear 0s";
+    allMedias[info].style.animation="opacityOut 0.2s linear 0s";
+    allCloses[info].style.animation="opacityOut 0.2s linear 0s";
+
+    setTimeout(function(){
+    document.getElementById("info").style.display="none";
+    document.getElementById("info-animate").style.display="none";
+    allInfos[info].style.display="none";
+    },200);
+
+
+    
  }
