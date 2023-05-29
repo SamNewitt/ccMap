@@ -69,6 +69,11 @@ height:100%;
     justify-content: flex-start;
     align-items: center;
     overflow: auto;
+    scrollbar-width: none;
+}
+
+.info-container::-webkit-scrollbar{
+    display: none;
 }
 
 
@@ -126,9 +131,9 @@ opacity: 0;
 }
 
 .info-close{
-    position:absolute;
-    bottom:10px;
-    right: 10px;
+    position:fixed;
+    bottom:60px;
+    right: 60px;
     width: 50px;
     height: 50px;
     opacity: 0;
