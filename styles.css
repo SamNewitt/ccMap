@@ -13,6 +13,10 @@ body{
     left:0;
 }
 
+#svg-container:hover{
+/* cursor: grab; */
+}
+
 #background{
     background-color: #425465;
     width: 100%;
@@ -28,7 +32,9 @@ g{
     width:100%;
 }
 
-
+.pin{
+    opacity:0;
+}
 #info{
     position:absolute;
     top: 0;
@@ -46,7 +52,7 @@ g{
     background-color: #fff;
     width:90%;
     max-width:930px;
-    height:0;
+    height:90%;
     border: 2px solid #fff;
     border-radius: 20px;
     display: none;
@@ -66,7 +72,7 @@ g{
     background-color: #e65525;
     width:90%;
     max-width:930px;
-    height:0;
+    height:90%;
     border: 2px solid #fff;
     border-radius: 20px;
     display: none;
@@ -115,7 +121,7 @@ g{
     margin:0;
     padding-bottom:20px;
     border-bottom: 2px solid #425465;
-
+    position:relative
 }
 
 .info-media{
@@ -135,13 +141,16 @@ opacity: 0;
     padding: 5px;
 }
 
-.info-close{
+#info-close{
     position:fixed;
-    bottom:60px;
-    right: 60px;
-    width: 50px;
-    height: 50px;
+    top:5px;
+    right:5px;
+    height: 5%;
     opacity: 0;
+}
+
+#info-close:hover, .pin:hover{
+cursor: pointer !important;
 }
 
 div, img{
@@ -166,6 +175,17 @@ div, img{
 @keyframes infoIn {
     from{
         height:0;
+        display:none
+    }
+    to{
+        height: 90%;
+        display:flex;
+    }
+    
+}
+@keyframes infoIn2 {
+    from{
+        height:6%;
         display:none
     }
     to{
