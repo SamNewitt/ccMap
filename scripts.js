@@ -1,48 +1,56 @@
+var panZoom = svgPanZoom('#svg-container');
+window.onload = init();
+function init(){
+   
+   if(window.innerHeight*1.95333>window.innerWidth){
+    document.getElementById("map").style.height='auto';
+   
+    document.getElementById("map").style.width="100%";
+    document.getElementById("map").setAttribute("y", (panZoom.getSizes().height-document.getElementById("map").getBBox().height)/2);
 
-
-
-
-var zoomCheckReqired=true;
-
-function checkBorder(){
-  if(zoomCheckReqired){
-    if(panZoom.getPan().x>0){
-    zoomCheckReqired=false;
-    panZoom.pan({x:0, y: panZoom.getPan().y});
    }
-if(panZoom.getPan().x-panZoom.getSizes().width<panZoom.getSizes().width*panZoom.getZoom()*-1){
-    zoomCheckReqired=false;
-    panZoom.pan({x: panZoom.getSizes().width*panZoom.getZoom()*-1+panZoom.getSizes().width, y: panZoom.getPan().y});
-}
+   else{
+    document.getElementById("map").style.width='auto';
+   
+   document.getElementById("map").style.height="100%";
+   document.getElementById("map").setAttribute("x", (panZoom.getSizes().width-document.getElementById("map").getBBox().width)/2);
 
-if(panZoom.getPan().y>0){
-    zoomCheckReqired=false;
-    panZoom.pan({x:panZoom.getPan().x, y: 0});
    }
+   
+    var height=$("#map").height(), width=$("#map").width();
 
-   if(panZoom.getPan().y-panZoom.getSizes().height<panZoom.getSizes().height*panZoom.getZoom()*-1){
-    zoomCheckReqired=false;
-    panZoom.pan({x: panZoom.getPan().x, y: panZoom.getSizes().height*panZoom.getZoom()*-1+panZoom.getSizes().height});
-}
-}
-else{
-    zoomCheckReqired=true;
-}
-}
-
-function zoomCallback(){
-    checkBorder();
 var pins = document.getElementsByClassName("pin");
-var height=$("#map").height(), width=$("#map").width();
-
 pinSize=document.getElementById("map").getBBox().height/10;
-
-    for(var i=0; i<pins.length; i++){
-        pins[i].setAttribute("height",pinSize/panZoom.getZoom());
+for(var i=0; i<pins.length; i++){
+pins[i].setAttribute("y",pins[i].getAttribute("ypos")*height+(panZoom.getSizes().height-height)/2-pins[i].getBBox().height);
+ pins[i].setAttribute("x",pins[i].getAttribute("xpos")*width+(panZoom.getSizes().width-width)/2-pins[i].getBBox().width/2);
+ pins[i].setAttribute("height",pinSize/panZoom.getZoom());
         pins[i].setAttribute("width",pinSize/panZoom.getZoom());
-        pins[i].setAttribute("y",pins[i].getAttribute("ypos")*height+(panZoom.getSizes().height-height)/2-pins[i].getBBox().height);
-         pins[i].setAttribute("x",pins[i].getAttribute("xpos")*width+(panZoom.getSizes().width-width)/2-pins[i].getBBox().width/2);
-        
-        
-        }
+
+        pins[i].addEventListener("mousedown",setTargetPin);
+
+
 }
+
+    
+   
+        
+    
+}
+
+var targetPin, mouseX, mouseY, mousePrevX, mousePrevY;
+
+window.addEventListener("mouseup", openPin)
+
+
+function setTargetPin(e){
+   targetPin=this;
+    mouseX=e.clientX;
+    mouseY=e.clientY;
+ }
+
+ function openPin(e){
+    if(Math.abs(mouseX-e.clientX)<5&&Math.abs(mouseY-e.clientY)<5){
+    
+    }
+ }
