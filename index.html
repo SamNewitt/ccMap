@@ -8,11 +8,53 @@
 <svg id="svg-container">
 
     <image id="map"  x="0" y="0"  href="map.svg"/> 
-</svg>
+    <image class="pin" xpos=".505" ypos=".60" height="10%" href="pin.svg"></image>
+    <image class="pin" xpos=".5" ypos=".63" height="10%" href="pin.svg"></image>
+    <image class="pin" xpos=".51" ypos=".64" height="10%" href="pin.svg"></image>
+></svg>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="scripts.js"></script>
 <script src="zoom-pan.js"></script>
 <script src="hammer.js"></script>
 <script src="hammerInit.js"></script>
 
-<script>var panZoom = svgPanZoom('#svg-container');</script>
+<script>var panZoom = svgPanZoom('#svg-container');
+
+window.onload = renderPinLocations();
+
+function renderPinLocations(){
+   
+   if(window.innerHeight*1.95333>window.innerWidth){
+    document.getElementById("map").style.height='auto';
+   
+    document.getElementById("map").style.width="100%";
+    document.getElementById("map").setAttribute("y", (window.innerHeight-document.getElementById("map").getBBox().height)/2);
+
+   }
+   else{
+    document.getElementById("map").style.width='auto';
+   
+   document.getElementById("map").style.height="100%";
+   document.getElementById("map").setAttribute("x", (window.innerWidth-document.getElementById("map").getBBox().width)/2);
+
+   }
+   
+    var height=$("#map").height(), width=$("#map").width();
+
+var pins = document.getElementsByClassName("pin");
+
+for(var i=0; i<pins.length; i++){
+pins[i].setAttribute("y",pins[i].getAttribute("ypos")*height+(panZoom.getSizes().height-height)/2-pins[i].getBBox().height);
+ pins[i].setAttribute("x",pins[i].getAttribute("xpos")*width+(panZoom.getSizes().width-width)/2-pins[i].getBBox().width/2);
+
+
+
+
+}
+
+ 
+    
+   
+        
+    
+}</script>

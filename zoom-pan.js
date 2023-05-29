@@ -518,7 +518,7 @@ var xPos=0, yPos=0, prevX=0, prevY=0;
     , center: true // enable or disable viewport centering in SVG (default true)
     , refreshRate: '60' // Maximum number of frames per second (altering SVG's viewport)
     , beforeZoom: null
-    , onZoom: checkBorder
+    , onZoom: zoomCallback
     , beforePan: null
     , onPan: checkBorder
     , customEventsHandler: null
