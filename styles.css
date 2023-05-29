@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+
 body{
     margin:0;
 }
@@ -19,4 +22,100 @@ height:100%;
 #map{
     height: 100%;
     width:100%;
+}
+
+#info{
+    position:absolute;
+    top: 0;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-animate{
+    position:absolute;
+    background-color: #fff;
+    width:90%;
+    max-width:830px;
+    height:90%;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#info-animate img{
+    width:80%;
+    max-width:400px;
+}
+
+.info-container{
+    position:absolute;
+    background-color: #e65525;
+    width:90%;
+    max-width:930px;
+    height:90%;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+}
+
+
+.info-title{
+    width:100%;
+    text-align: center;
+    color:#fff;
+    font-family: "Oswald", sans-serif;
+    font-size:2.7em;
+    font-weight:600;
+    margin:0;
+    text-decoration: underline;
+    padding-top:10px;
+    padding-bottom:25px;
+
+}
+
+@media screen and (max-width: 500px){
+    .info-title{
+        font-size:1.5em;
+    }
+    .info-desc{
+        font-size: 0.4em;
+    }
+}
+
+.info-desc{
+    font-style: italic;
+    width:80%;
+    text-align: center;
+    color:#fff;
+    font-family: "Roboto", sans-serif;
+    font-size:1em;
+    margin:0;
+    padding-bottom:20px;
+}
+
+.info-pics{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:95%;
+    border-top: 2px solid #425465;
+    padding-top:10px;
+height:100%;
+}
+
+.info-pics img{
+    max-height:175px;
+    max-width:45%;
+    padding: 5px;
 }
