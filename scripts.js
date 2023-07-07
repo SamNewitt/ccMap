@@ -18,11 +18,14 @@ function init(){
 
    }
    
-    var height=$("#map").height(), width=$("#map").width();
+    var height=document.getElementById("map").getBoundingClientRect().height;
+    var width=document.getElementById("map").getBoundingClientRect().width;
+    console.log(height);
+    console.log(width);
+
 
 var pins = document.getElementsByClassName("pin");
 pinSize=window.innerHeight/10;
-console.log(window.innerWidth);
 
 for(var i=0; i<pins.length; i++){
     pins[i].setAttribute("height",pinSize/panZoom.getZoom());
@@ -64,9 +67,8 @@ function setTargetPin(e){
      allInfos=document.getElementsByClassName("info-container");
       allMedias=document.getElementsByClassName("info-media");
     if(Math.abs(mouseX-e.clientX)<5&&Math.abs(mouseY-e.clientY)<5){
-        console.log(targetPin);
     for(var i=0; i<allInfos.length;i++){
-        console.log(allInfos[i].getAttribute("name"));
+       
         if(allInfos[i].getAttribute("name")==targetPin){
             info=i;
         }
