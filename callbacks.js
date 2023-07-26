@@ -30,28 +30,16 @@ else{
 }
 }
 
-var height, width;
+// var height, width;
 //Have to set timeout so the image has time to load
-setTimeout(function(){
- height=document.getElementById("map").getBoundingClientRect().height;
- width=document.getElementById("map").getBoundingClientRect().width;
-},10);
+// setTimeout(function(){
+//  height=document.getElementById("map").getBoundingClientRect().height;
+//  width=document.getElementById("map").getBoundingClientRect().width;
+// },10);
 
 function zoomCallback(){
     checkBorder();
-
-var pins = document.getElementsByClassName("pin");
-
-pinSize=panZoom.getSizes().height/10;
-
-    for(var i=0; i<pins.length; i++){
-        pins[i].setAttribute("height",pinSize/panZoom.getZoom());
-        pins[i].setAttribute("width",pinSize/panZoom.getZoom()*0.58);
-        pins[i].setAttribute("y",pins[i].getAttribute("ypos")*height+(panZoom.getSizes().height-height)/2-pins[i].getBBox().height);
-         pins[i].setAttribute("x",pins[i].getAttribute("xpos")*width+(panZoom.getSizes().width-width)/2-pins[i].getBBox().width/2);
-        console.log(pinSize/panZoom.getZoom());
-        
-        }
+setTimeout(resize,100);
 
     
 }

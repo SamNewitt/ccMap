@@ -97,5 +97,16 @@
 <script src="hammer.js?ver=2"></script>
 <script src="hammerInit.js?ver=2"></script>
 <script src="scripts.js?ver=2"></script>
+<script>
+    window.addEventListener("resize", updateSize);
+window.onload = init();
+    function updateSize(){
+    setTimeout(function(){
+    setMap();
+    resize();
+    },100);
+    }
+    
+</script>
 
 
