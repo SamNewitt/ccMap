@@ -101,10 +101,13 @@
     window.addEventListener("resize", updateSize);
 window.onload = init();
     function updateSize(){
+    panZoom.zoomAtPoint(1, {x: 0, y: 0});
     setTimeout(function(){
+     
     setMap();
+
     resize();
-    },100);
+    },200);
     }
     
 </script>

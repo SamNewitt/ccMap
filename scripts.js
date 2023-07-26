@@ -31,7 +31,9 @@ function setMap(){
 }
 
 function resize(){
-    pinSize=panZoom.getSizes().height/10;
+    // pinSize=panZoom.getSizes().height/10;
+    pinSize=Math.min(window.innerHeight/10,window.innerWidth/13);
+
 
     for(var i=0; i<pins.length; i++){
         // pins[i].setAttribute("height",pinSize/panZoom.getZoom());
@@ -40,6 +42,7 @@ function resize(){
         //  pins[i].setAttribute("x",pins[i].getAttribute("xpos")*width+(panZoom.getSizes().width-width)/2-pins[i].getBBox().width/2);
          pins[i].setAttribute("height",pinSize/panZoom.getZoom());
         pins[i].setAttribute("width",pinSize/panZoom.getZoom()*0.58);
+        console.log(pinSize);
          pins[i].setAttribute("y",pins[i].getAttribute("ypos")*height+(window.innerHeight-height)/2-pins[i].getBBox().height);
           pins[i].setAttribute("x",pins[i].getAttribute("xpos")*width+(window.innerWidth-width)/2-pins[i].getBBox().width/2);
         }
