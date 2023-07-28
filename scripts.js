@@ -32,17 +32,18 @@ function setMap(){
 
 function resize(){
     // pinSize=panZoom.getSizes().height/10;
-    pinSize=Math.min(window.innerHeight/10,window.innerWidth/13);
+    pinSize=Math.min(window.innerHeight/13,window.innerWidth/16);
 
 
     for(var i=0; i<pins.length; i++){
-        // pins[i].setAttribute("height",pinSize/panZoom.getZoom());
-        // pins[i].setAttribute("width",pinSize/panZoom.getZoom()*0.58);
-        // pins[i].setAttribute("y",pins[i].getAttribute("ypos")*height+(panZoom.getSizes().height-height)/2-pins[i].getBBox().height);
-        //  pins[i].setAttribute("x",pins[i].getAttribute("xpos")*width+(panZoom.getSizes().width-width)/2-pins[i].getBBox().width/2);
-         pins[i].setAttribute("height",pinSize/panZoom.getZoom());
-        pins[i].setAttribute("width",pinSize/panZoom.getZoom()*0.58);
-        console.log(pinSize);
+        if(pins[i].classList.contains("sf")){
+        pins[i].setAttribute("height",pinSize/panZoom.getZoom());
+        pins[i].setAttribute("width",pinSize/panZoom.getZoom()*2.81); 
+        }
+        else{
+            pins[i].setAttribute("height",pinSize/panZoom.getZoom());
+            pins[i].setAttribute("width",pinSize/panZoom.getZoom()*0.69);
+        }
          pins[i].setAttribute("y",pins[i].getAttribute("ypos")*height+(window.innerHeight-height)/2-pins[i].getBBox().height);
           pins[i].setAttribute("x",pins[i].getAttribute("xpos")*width+(window.innerWidth-width)/2-pins[i].getBBox().width/2);
         }
@@ -56,9 +57,10 @@ resize();
 for(var i=0; i<pins.length; i++){
 
 pins[i].addEventListener("mousedown",setTargetPin);
-pins[i].addEventListener("mouseover",function(){this.setAttribute("href", "pinHover.svg")});
-pins[i].addEventListener("mouseout",function(){this.setAttribute("href", "pin.svg")});
 pins[i].style.opacity="1";
+pins[i].addEventListener("mouseover",pinHoverIn);
+pins[i].addEventListener("mouseout",pinHoverOut);
+
 
 }
 
@@ -70,6 +72,30 @@ window.addEventListener("mouseup", openPin);
 
 
 
+function pinHoverIn(){
+    console.log("F");
+if(this.classList.contains("sf"))
+{
+    this.setAttribute("href", "pinHover.svg");
+}
+else{
+    this.setAttribute("href", "pinHover.svg");
+}
+}
+
+
+function pinHoverOut(){
+    if(this.classList.contains("sf"))
+    {
+        this.setAttribute("href", "pin.svg");
+    }
+    else{
+        this.setAttribute("href", "pin.svg");
+    }
+    }
+
+
+
 function setTargetPin(e){
    targetPin=this.getAttribute("name");
     mouseX=e.clientX;
@@ -77,6 +103,10 @@ function setTargetPin(e){
  }
 
  function openPin(e){
+    if(targetPin=="SF"){
+
+    }
+    else{
      allInfos=document.getElementsByClassName("info-container");
       allMedias=document.getElementsByClassName("info-media");
     if(Math.abs(mouseX-e.clientX)<5&&Math.abs(mouseY-e.clientY)<5){
@@ -106,11 +136,11 @@ function setTargetPin(e){
        allMedias[info].style.animation="opacityIn 0.5s linear 0s";
        allInfos[info].style.overflow="auto";
     },1200);
-    
+
     
 
     }
-
+    }
  
  }
  function closePin(){

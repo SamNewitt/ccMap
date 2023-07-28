@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
 
 body{
@@ -88,13 +89,12 @@ g{
 }
 
 
-.info-title{
+.info-container h1{
     width:100%;
     text-align: center;
     color:#fff;
-    font-family: "Oswald", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size:2.7em;
-    font-weight:600;
     margin:0;
     text-decoration: underline;
     padding-top:10px;
@@ -103,20 +103,18 @@ g{
 }
 
 @media screen and (max-width: 500px){
-    .info-title{
+    .info-container h1{
         font-size:1.5em;
     }
-    .info-desc{
+    .info-container p{
         font-size: 0.4em;
     }
 }
 
-.info-desc{
-    font-style: italic;
+.info-container p{
     width:80%;
-    text-align: center;
     color:#fff;
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size:1em;
     margin:0;
     padding-bottom:20px;
@@ -153,43 +151,16 @@ opacity: 0;
 cursor: pointer !important;
 }
 
-div, img{
-    animation-fill-mode: forwards !important;
-}
-@keyframes opacityIn {
-    from{
-        opacity:0;
-    }
-    to{
-        opacity:1;
-    }
-}
-@keyframes opacityOut {
-    from{
-        opacity:1;
-    }
-    to{
-        opacity:0;
-    }
-}
-@keyframes infoIn {
-    from{
-        height:0;
-        display:none
-    }
-    to{
-        height: 90%;
-        display:flex;
-    }
-    
-}
-@keyframes infoIn2 {
-    from{
-        height:6%;
-        display:none
-    }
-    to{
-        height: 90%;
-        display:flex;
-    }
+
+
+
+
+
+#local-animation{
+    background-color: #e65525;
+    position:absolute;
+    width:0;
+    height:100%;
+    top:0;
+
 }

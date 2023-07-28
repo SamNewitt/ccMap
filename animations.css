@@ -1,0 +1,41 @@
+
+div, img{
+    animation-fill-mode: forwards !important;
+}
+@keyframes opacityIn {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+@keyframes opacityOut {
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+}
+@keyframes infoIn {
+    from{
+        height:0;
+        display:none
+    }
+    to{
+        height: 90%;
+        display:flex;
+    }
+    
+}
+@keyframes infoIn2 {
+    from{
+        height:6%;
+        display:none
+    }
+    to{
+        height: 90%;
+        display:flex;
+    }
+}
