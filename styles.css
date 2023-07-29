@@ -128,6 +128,17 @@ g{
     padding-bottom:25px;
 }
 
+@media screen and (max-width: 700px){
+.info-title{
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+.info-container h1{
+    text-align: center;
+    margin-bottom:15px;
+}
+}
+
 .info-logo{
     max-height: 75px;
     max-width: 33%;
