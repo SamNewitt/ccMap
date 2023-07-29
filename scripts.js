@@ -133,7 +133,6 @@ function setTargetPin(e){
         document.getElementById("info-close").style.display="block";
         document.getElementById("info-animate").style.display="flex";
        document.getElementById("info-close").style.animation="opacityIn 0.2s linear 0s";
-
         document.getElementById("info-animate").style.animation="infoIn 0.5s ease 0s";
     },200);
     setTimeout(function(){

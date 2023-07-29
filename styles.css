@@ -91,14 +91,12 @@ g{
 
 .info-container h1{
     width:100%;
-    text-align: center;
     color:#fff;
     font-family: "Montserrat", sans-serif;
     font-size:2.7em;
     margin:0;
     text-decoration: underline;
-    padding-top:10px;
-    padding-bottom:25px;
+
 
 }
 
@@ -122,13 +120,29 @@ g{
     position:relative
 }
 
+.info-title{
+    display: flex;
+    align-items: center;
+    width:80%;
+    padding-top:10px;
+    padding-bottom:25px;
+}
+
+.info-logo{
+    max-height: 75px;
+    max-width: 33%;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
 .info-media{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width:95%;
-    padding-top:10px;
+    padding-top:20px;
 height:100%;
 opacity: 0;
 }
