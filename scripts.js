@@ -121,11 +121,13 @@ function setTargetPin(e){
 
     else{
         for(var i=0; i<allInfos.length;i++){
-       
+       info=-1;
         if(allInfos[i].getAttribute("name")==targetPin){
             info=i;
         }
     }
+    if (info!=-1)
+    {
     document.getElementById("info").style.display="flex";
     document.getElementById("info").style.animation="opacityIn 0.2s linear 0s";
     document.getElementById("info-close").style.display="none";
@@ -145,7 +147,7 @@ function setTargetPin(e){
        allMedias[info].style.animation="opacityIn 0.5s linear 0s";
        allInfos[info].style.overflow="auto";
     },1200);
-
+    }
     
 
     }
