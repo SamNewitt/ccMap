@@ -164,3 +164,54 @@ cursor: pointer !important;
     top:0;
 
 }
+
+#local-container{
+    background-color: #fff;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+
+#local-svg{
+   aspect-ratio: 1.335/1; 
+   border: 7px solid #425465;
+   border-radius: 75px;
+}
+
+@media screen and (max-width: 800px){
+#local-svg{
+    border: 3px solid #425465;
+   border-radius: 40px;
+
+}
+}
+
+#local-map{
+    height: 106%;
+    width: 106%;
+}
+
+#local-return{
+    position:absolute;
+    font-family: "Montserrat", sans-serif;
+    right: 20px;
+    bottom: 20px;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    background-color: #e65525;
+    border-radius: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#local-return:hover{
+background-color: #a13b1a;
+}
+

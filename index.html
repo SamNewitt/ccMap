@@ -20,6 +20,23 @@
     <image class="pin" xpos=".615" ypos=".58" height="10%" href="pin.svg" name="e4"></image>
     <image class="pin" xpos=".607" ypos=".59" height="10%" href="pin.svg" name="e5" ></image>
 ></svg>
+
+
+
+
+<div id=local-container>
+    <svg id="local-svg">
+        
+        <image id="local-map"  x="-3%" y="-3%"  href="sfMap.svg"/> 
+        <image class="pin local-pin" x="40%" y="50%" height="6%" href="pin.svg" name="e5" ></image>
+    
+        </svg>
+       <a href="javascript:void(0)" onclick="closeLocal()" id="local-return"><b>Back To World Map </b><i class="fa-solid fa-earth-americas"></i></a>
+        </div>
+    <div id="local-animation"></div>
+
+
+
 <div id="info">
     <div id="info-animate">
     <img src="ccLogo.png" alt="Cental Church Logo">
@@ -91,10 +108,7 @@
 
 
 </div>
-<div id="local-container">
-
-</div>
-<div id="local-animation"></div>
+<script src="https://kit.fontawesome.com/9ac7060263.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="callbacks.js?ver=2"></script>
 <script src="zoom-pan.js?ver=2"></script>

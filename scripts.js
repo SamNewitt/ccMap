@@ -28,6 +28,15 @@ function setMap(){
        }
        height=document.getElementById("map").getBoundingClientRect().height;
     width=document.getElementById("map").getBoundingClientRect().width; 
+
+    if(window.innerHeight*1.335>window.innerWidth){
+        document.getElementById("local-svg").style.width="95%";
+        document.getElementById("local-svg").style.height="auto";
+    }
+    else{
+        document.getElementById("local-svg").style.height="95%";
+        document.getElementById("local-svg").style.width="auto"; 
+    }
 }
 
 function resize(){
@@ -36,17 +45,13 @@ function resize(){
 
 
     for(var i=0; i<pins.length; i++){
-        if(pins[i].classList.contains("sf")){
-        pins[i].setAttribute("height",pinSize/panZoom.getZoom());
-        pins[i].setAttribute("width",pinSize/panZoom.getZoom()*2.81); 
-        }
-        else{
+    if(pins[i].classList.contains("local-pin")==false){
             pins[i].setAttribute("height",pinSize/panZoom.getZoom());
             pins[i].setAttribute("width",pinSize/panZoom.getZoom()*0.69);
-        }
          pins[i].setAttribute("y",pins[i].getAttribute("ypos")*height+(window.innerHeight-height)/2-pins[i].getBBox().height);
           pins[i].setAttribute("x",pins[i].getAttribute("xpos")*width+(window.innerWidth-width)/2-pins[i].getBBox().width/2);
         }
+    }
 
 }
 function init(){
@@ -73,7 +78,6 @@ window.addEventListener("mouseup", openPin);
 
 
 function pinHoverIn(){
-    console.log("F");
 if(this.classList.contains("sf"))
 {
     this.setAttribute("href", "pinHover.svg");
@@ -103,14 +107,20 @@ function setTargetPin(e){
  }
 
  function openPin(e){
-    if(targetPin=="SF"){
-
-    }
-    else{
+  
      allInfos=document.getElementsByClassName("info-container");
       allMedias=document.getElementsByClassName("info-media");
     if(Math.abs(mouseX-e.clientX)<5&&Math.abs(mouseY-e.clientY)<5){
-    for(var i=0; i<allInfos.length;i++){
+        if(targetPin=="SF"){
+            document.getElementById("local-animation").style.animation="localIn 0.5s ease 0s"
+            setTimeout(function(){
+                document.getElementById("local-container").style.display="flex";
+                document.getElementById("local-animation").style.animation="localOut 0.5s ease 0s"
+            },500);
+                }
+
+    else{
+        for(var i=0; i<allInfos.length;i++){
        
         if(allInfos[i].getAttribute("name")==targetPin){
             info=i;
@@ -159,4 +169,14 @@ function setTargetPin(e){
 
 
     
+ }
+
+ function closeLocal(){
+    document.getElementById("local-container").style.animation="opacityOut 0.5s linear 0s";
+    setTimeout(function(){
+        document.getElementById("local-container").style.display="none";
+        document.getElementById("local-container").style.animation="";
+
+
+    },500);
  }

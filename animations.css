@@ -39,3 +39,23 @@ div, img{
         display:flex;
     }
 }
+
+@keyframes localIn {
+    from{
+      width:0%;
+    }
+    to{
+     width:100%;
+    }
+}
+
+@keyframes localOut {
+    from{
+      width:100%;
+      left:0;
+    }
+    to{
+     width:0;
+     left:100%;
+    }
+}
