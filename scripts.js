@@ -107,7 +107,6 @@ function setTargetPin(e){
  }
 
  function openPin(e){
-  
      allInfos=document.getElementsByClassName("info-container");
       allMedias=document.getElementsByClassName("info-media");
     if(Math.abs(mouseX-e.clientX)<5&&Math.abs(mouseY-e.clientY)<5){
@@ -120,8 +119,8 @@ function setTargetPin(e){
                 }
 
     else{
+        info=-1;
         for(var i=0; i<allInfos.length;i++){
-       info=-1;
         if(allInfos[i].getAttribute("name")==targetPin){
             info=i;
         }

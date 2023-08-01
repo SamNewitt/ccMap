@@ -93,7 +93,7 @@ g{
     width:100%;
     color:#fff;
     font-family: "Montserrat", sans-serif;
-    font-size:2.7em;
+    font-size:3em;
     margin:0;
     text-decoration: underline;
 
@@ -105,7 +105,7 @@ g{
         font-size:1.5em;
     }
     .info-container p{
-        font-size: 0.4em;
+        font-size: 0.5em;
     }
 }
 
@@ -113,7 +113,7 @@ g{
     width:80%;
     color:#fff;
     font-family: "Montserrat", sans-serif;
-    font-size:1em;
+    font-size:1.25em;
     margin:0;
     padding-bottom:20px;
     border-bottom: 2px solid #425465;
@@ -140,10 +140,11 @@ g{
 }
 
 .info-logo{
-    max-height: 75px;
+    max-height: 125px;
     max-width: 33%;
     border: 3px solid #fff;
     border-radius: 5px;
+    background-color: #fff;
     margin-left: 10px;
 }
 
