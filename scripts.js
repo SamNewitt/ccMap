@@ -73,6 +73,12 @@ document.getElementById("info-close").addEventListener("mouseover",function(){th
 document.getElementById("info-close").addEventListener("mouseout",function(){this.setAttribute("src", "x.svg")});
 window.addEventListener("mouseup", openPin);
        
+
+var headings = document.querySelectorAll(".info-container h1");
+for(var i=0; i<headings.length; i++)
+{
+    headings[i].innerHTML= headings[i].innerHTML.toLowerCase().replace(/(^|\s)\S/g, L => L.toUpperCase());
+}
 }
 
 
