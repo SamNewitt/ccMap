@@ -66,6 +66,21 @@ pins[i].style.opacity="1";
 pins[i].addEventListener("mouseover",pinHoverIn);
 pins[i].addEventListener("mouseout",pinHoverOut);
 
+if(pins[i].classList.contains("or")){
+pins[i].setAttribute("href", "pinRed.svg");
+}
+if(pins[i].classList.contains("ng")){
+pins[i].setAttribute("href", "pinYellow.svg");
+}
+if(pins[i].classList.contains("kf")){
+pins[i].setAttribute("href", "pinGreen.svg");
+}
+if(pins[i].classList.contains("lp")){
+pins[i].setAttribute("href", "pinBlue.svg");
+}
+else if(pins[i].classList.contains("sf")){
+    pins[i].setAttribute("href", "pinGray.svg");
+    }
 
 }
 
@@ -84,10 +99,21 @@ for(var i=0; i<headings.length; i++)
 
 
 function pinHoverIn(){
-if(this.classList.contains("sf"))
-{
-    this.setAttribute("href", "pinHover.svg");
+if(this.classList.contains("or")){
+this.setAttribute("href", "pinRedHover.svg");
 }
+else if(this.classList.contains("ng")){
+this.setAttribute("href", "pinYellowHover.svg");
+}
+else if(this.classList.contains("kf")){
+this.setAttribute("href", "pinGreenHover.svg");
+}
+else if(this.classList.contains("lp")){
+this.setAttribute("href", "pinBlueHover.svg");
+}
+else if(this.classList.contains("sf")){
+    this.setAttribute("href", "pinGrayHover.svg");
+    }
 else{
     this.setAttribute("href", "pinHover.svg");
 }
@@ -95,10 +121,21 @@ else{
 
 
 function pinHoverOut(){
-    if(this.classList.contains("sf"))
-    {
-        this.setAttribute("href", "pin.svg");
-    }
+    if(this.classList.contains("or")){
+        this.setAttribute("href", "pinRed.svg");
+        }
+        else if(this.classList.contains("ng")){
+        this.setAttribute("href", "pinYellow.svg");
+        }
+        else if(this.classList.contains("kf")){
+        this.setAttribute("href", "pinGreen.svg");
+        }
+        else if(this.classList.contains("lp")){
+        this.setAttribute("href", "pinBlue.svg");
+        }
+        else if(this.classList.contains("sf")){
+            this.setAttribute("href", "pinGray.svg");
+            }
     else{
         this.setAttribute("href", "pin.svg");
     }
