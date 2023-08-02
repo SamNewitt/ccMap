@@ -242,3 +242,11 @@ cursor: pointer !important;
 background-color: #a13b1a;
 }
 
+#key{
+    position: absolute;
+    max-width: 15%;
+    max-height: 20%;
+    left: 15px;
+    bottom: 15px;
+}
+
