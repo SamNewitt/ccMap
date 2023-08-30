@@ -31,11 +31,11 @@ function setMap(){
 
     if(window.innerHeight*1.335>window.innerWidth){
         document.getElementById("local-svg").style.width="95%";
-        document.getElementById("local-svg").style.height="auto";
+        document.getElementById("local-svg").style.height="calc(95vw*1/1.335)";
     }
     else{
         document.getElementById("local-svg").style.height="95%";
-        document.getElementById("local-svg").style.width="auto"; 
+        document.getElementById("local-svg").style.width="calc(95vh*1.335)"; 
     }
 }
 

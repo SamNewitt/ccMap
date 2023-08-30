@@ -204,10 +204,11 @@ cursor: pointer !important;
 }
 
 #local-svg{
-   aspect-ratio: 1.335/1; 
+   /* aspect-ratio: 1.335/1;  */
    border: 7px solid #425465;
    border-radius: 75px;
 }
+
 
 @media screen and (max-width: 800px){
 #local-svg{
