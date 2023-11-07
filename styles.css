@@ -111,6 +111,7 @@ g{
 }
 
 .info-container p{
+    text-align: center;
     width:80%;
     color:#fff;
     font-family: "Montserrat", sans-serif;
