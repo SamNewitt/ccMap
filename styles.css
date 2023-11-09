@@ -204,6 +204,10 @@ cursor: pointer !important;
     align-items: center;
 }
 
+#ethiopia-svg{
+    background-color: #425465;
+}
+
 #local-svg, #ethiopia-svg{
    /* aspect-ratio: 1.335/1;  */
    border: 7px solid #425465;
@@ -219,9 +223,14 @@ cursor: pointer !important;
 }
 }
 
-#local-map, #ethiopia-map{
+#local-map{
     height: 106%;
     width: 106%;
+}
+
+#ethiopia-map{
+    height:100%;
+    width: 100%;
 }
 
 .inset-return{
