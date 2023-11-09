@@ -505,7 +505,7 @@ var xPos=0, yPos=0, prevX=0, prevY=0;
     var optionsDefaults = {
       viewportSelector: '.svg-pan-zoom_viewport' // Viewport selector. Can be querySelector string or SVGElement
     , panEnabled: true // enable or disable panning (default enabled)
-    , controlIconsEnabled: false // insert icons to give user an option in addition to mouse events to control pan/zoom (default disabled)
+    , controlIconsEnabled: true // insert icons to give user an option in addition to mouse events to control pan/zoom (default disabled)
     , zoomEnabled: true // enable or disable zooming (default enabled)
     , dblClickZoomEnabled: true // enable or disable zooming by double clicking (default enabled)
     , mouseWheelZoomEnabled: true // enable or disable zooming by mouse wheel (default enabled)

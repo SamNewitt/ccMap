@@ -248,9 +248,48 @@ background-color: #a13b1a;
     position: absolute;
     max-width: 20%;
     max-height: 25%;
-    left: 15px;
-    bottom: 15px;
+    left: 20px;
+    bottom: 20px;
 }
+
+#controls{
+position:absolute;
+width: 40px;
+height:80px;
+background-color:#aaa;
+right: 20px;
+bottom: 20px;
+border-radius: 10px;
+overflow: hidden;
+border: 2px solid #fff;
+}
+
+#controls a{
+    display:block;
+    width: 40px;
+    font-size: 40px;
+    height:40px;
+    font-family: sans-serif;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+#controls a:hover{
+    background-color: #555;
+}
+
+#minus-sign{
+    position: absolute;
+    top: 58px;
+    left: 10px;
+    background-color: #fff;
+    height: 3.5px;
+    width: 19.5px;
+
+}
+
+
 
 @media screen and (max-width:700px)
 {
