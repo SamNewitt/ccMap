@@ -67,18 +67,34 @@ pins[i].addEventListener("mouseover",pinHoverIn);
 pins[i].addEventListener("mouseout",pinHoverOut);
 
 if(pins[i].classList.contains("or")){
-pins[i].setAttribute("href", "pinRed.svg");
+pins[i].setAttribute("href", "pins/pinRed.svg");
 }
-if(pins[i].classList.contains("ng")){
-pins[i].setAttribute("href", "pinYellow.svg");
+if(pins[i].classList.contains("cp")){
+pins[i].setAttribute("href", "pins/pinYellow.svg");
 }
-if(pins[i].classList.contains("kf")){
-pins[i].setAttribute("href", "pinGreen.svg");
+if(pins[i].classList.contains("ip")){
+pins[i].setAttribute("href", "pins/pinGreen.svg");
 }
 if(pins[i].classList.contains("lp")){
-pins[i].setAttribute("href", "pinBlue.svg");
+pins[i].setAttribute("href", "pins/pinBlue.svg");
 }
-else if(pins[i].classList.contains("sf")){
+
+
+if(pins[i].classList.contains("or-kf")){
+    pins[i].setAttribute("href", "pins/pinSolidRed.svg");
+    }
+    if(pins[i].classList.contains("cp-kf")){
+    pins[i].setAttribute("href", "pins/pinSolidYellow.svg");
+    }
+    if(pins[i].classList.contains("ip-kf")){
+    pins[i].setAttribute("href", "pins/pinSolidGreen.svg");
+    }
+    if(pins[i].classList.contains("lp-kf")){
+    pins[i].setAttribute("href", "pins/pinSolidBlue.svg");
+    }
+
+
+ if(pins[i].classList.contains("inset")){
     pins[i].setAttribute("href", "pinGray.svg");
     }
 
@@ -100,40 +116,69 @@ for(var i=0; i<headings.length; i++)
 
 function pinHoverIn(){
 if(this.classList.contains("or")){
-this.setAttribute("href", "pinRedHover.svg");
+this.setAttribute("href", "pins/pinRedHover.svg");
 }
-else if(this.classList.contains("ng")){
-this.setAttribute("href", "pinYellowHover.svg");
+else if(this.classList.contains("cp")){
+this.setAttribute("href", "pins/pinYellowHover.svg");
 }
-else if(this.classList.contains("kf")){
-this.setAttribute("href", "pinGreenHover.svg");
+else if(this.classList.contains("ip")){
+this.setAttribute("href", "pins/pinGreenHover.svg");
 }
 else if(this.classList.contains("lp")){
-this.setAttribute("href", "pinBlueHover.svg");
+this.setAttribute("href", "pins/pinBlueHover.svg");
 }
-else if(this.classList.contains("sf")){
-    this.setAttribute("href", "pinGrayHover.svg");
+
+else if(this.classList.contains("or-kf")){
+    this.setAttribute("href", "pins/pinSolidRedHover.svg");
+    }
+    else if(this.classList.contains("cp-kf")){
+    this.setAttribute("href", "pins/pinSolidYellowHover.svg");
+    }
+    else if(this.classList.contains("ip-kf")){
+    this.setAttribute("href", "pins/pinSolidGreenHover.svg");
+    }
+    else if(this.classList.contains("lp-kf")){
+    this.setAttribute("href", "pins/pinSolidBlueHover.svg");
+    }
+
+else if(this.classList.contains("inset")){
+    this.setAttribute("href", "pins/pinGrayHover.svg");
     }
 else{
-    this.setAttribute("href", "pinHover.svg");
+    this.setAttribute("href", "pins/pinHover.svg");
 }
 }
 
 
 function pinHoverOut(){
     if(this.classList.contains("or")){
-        this.setAttribute("href", "pinRed.svg");
+        this.setAttribute("href", "pins/pinRed.svg");
         }
-        else if(this.classList.contains("ng")){
-        this.setAttribute("href", "pinYellow.svg");
+        else if(this.classList.contains("cp")){
+        this.setAttribute("href", "pins/pinYellow.svg");
         }
-        else if(this.classList.contains("kf")){
-        this.setAttribute("href", "pinGreen.svg");
+        else if(this.classList.contains("ip")){
+        this.setAttribute("href", "pins/pinGreen.svg");
         }
         else if(this.classList.contains("lp")){
-        this.setAttribute("href", "pinBlue.svg");
+        this.setAttribute("href", "pins/pinBlue.svg");
         }
-        else if(this.classList.contains("sf")){
+       
+     if(this.classList.contains("or-kf")){
+            this.setAttribute("href", "pins/pinSolidRed.svg");
+            }
+            else if(this.classList.contains("cp-kf")){
+            this.setAttribute("href", "pins/pinSolidYellow.svg");
+            }
+            else if(this.classList.contains("ip-kf")){
+            this.setAttribute("href", "pins/pinSolidGreen.svg");
+            }
+            else if(this.classList.contains("lp-kf")){
+            this.setAttribute("href", "pins/pinSolidBlue.svg");
+            }
+
+
+        else if(this.classList.contains("inset")){
             this.setAttribute("href", "pinGray.svg");
             }
     else{
