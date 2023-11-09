@@ -168,7 +168,7 @@ function pinHoverOut(){
         this.setAttribute("href", "pins/pinBlue.svg");
         }
        
-     if(this.classList.contains("or-kf")){
+     else if(this.classList.contains("or-kf")){
             this.setAttribute("href", "pins/pinSolidRed.svg");
             }
             else if(this.classList.contains("cp-kf")){
@@ -209,7 +209,7 @@ function setTargetPin(e){
                 document.getElementById("inset-animation").style.animation="insetOut 0.5s ease 0s"
             },500);
          }
-         else if(targetPin="ethiopia"){
+         else if(targetPin=="ethiopia"){
             document.getElementById("inset-animation").style.animation="insetIn 0.5s ease 0s"
             setTimeout(function(){
                 document.getElementById("ethiopia-container").style.display="flex";

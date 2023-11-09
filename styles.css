@@ -150,6 +150,21 @@ g{
     margin-left: 10px;
 }
 
+.info-link{
+    color: #425465;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.info-link-lowercase{
+    color: #425465;
+    font-weight: bold;  
+}
+
+.info-link:hover{
+    color:#222;
+}
+
 .info-media{
     display: flex;
     justify-content: center;
