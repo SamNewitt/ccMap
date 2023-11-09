@@ -20,17 +20,24 @@
     <image class="lp pin" xpos=".054" ypos=".42" height="10%" href="" name="waddell"></image>
     <image class="lp pin" xpos=".225" ypos=".315" height="10%" href="" name="miller"></image>
     
-    <image class="or pin" xpos=".585" ypos=".53" height="10%" href="" name="edaw"></image>
+    <image class="inset pin" xpos=".59" ypos=".565" height="10%" href="" name="ethiopia"></image>
+
+
+    <!-- <image class="or pin" xpos=".585" ypos=".53" height="10%" href="" name="edaw"></image>
     <image class="kf pin" xpos=".608" ypos=".535" height="10%" href="" name="selamta"></image>
     <image class="kf pin" xpos=".593" ypos=".535" height="10%" href="" name="tti"></image>
     <image class="lp pin" xpos=".605" ypos=".555" height="10%" href="" name="fiem"></image>
     <image class="kf pin" xpos=".595" ypos=".55" height="10%" href="" name="mka"></image>
     <image class="or pin" xpos=".59" ypos=".565" height="10%" href="" name="atf"></image>
-    <image class="kf pin" xpos=".598" ypos=".573" height="10%" href="" name="shamida"></image>
+    <image class="kf pin" xpos=".598" ypos=".573" height="10%" href="" name="shamida"></image> -->
 
 </svg>
 
-
+<div id="controls">
+    <a href="javasctipt:void(0)" id="plus" onclick="zoomIn()">+</a>
+    <a href="javasctipt:void(0)" id="minus" onclick="zoomOut()"></a>
+    <span id="minus-sign"></span>
+</div>
 
 
 <div id=local-container>
@@ -60,17 +67,21 @@
 
 
         </svg>
-       <a href="javascript:void(0)" onclick="closeLocal()" id="local-return"><b>Back To World Map </b><i class="fa-solid fa-earth-americas"></i></a>
+       <a href="javascript:void(0)" onclick="closeInset()" class="inset-return"><b>Back To World Map </b><i class="fa-solid fa-earth-americas"></i></a>
         </div>
-<img id=key src="key.png" alt="Map Key">
-<div id="controls">
-    <a href="javasctipt:void(0)" id="plus">+</a>
-    <a href="javasctipt:void(0)" id="minus"></a>
-    <span id="minus-sign"></span>
+
+<div id="ethiopia-container">
+<svg id="ethiopia-svg">
+    <image id="ethiopia-map"  x="-3%" y="-3%"  href="sfMap.svg"/> 
+
+</svg>
+<a href="javascript:void(0)" onclick="closeInset()" class="inset-return"><b>Back To World Map </b><i class="fa-solid fa-earth-americas"></i></a>
 </div>
+<img id=key src="key.png" alt="Map Key">
 
 
-    <div id="local-animation"></div>
+
+    <div id="inset-animation"></div>
 
 
 

@@ -184,7 +184,7 @@ cursor: pointer !important;
 
 
 
-#local-animation{
+#inset-animation{
     background-color: #e65525;
     position:absolute;
     width:0;
@@ -193,7 +193,7 @@ cursor: pointer !important;
 
 }
 
-#local-container{
+#local-container, #ethiopia-container{
     background-color: #fff;
     position:absolute;
     width:100%;
@@ -204,7 +204,7 @@ cursor: pointer !important;
     align-items: center;
 }
 
-#local-svg{
+#local-svg, #ethiopia-svg{
    /* aspect-ratio: 1.335/1;  */
    border: 7px solid #425465;
    border-radius: 75px;
@@ -212,23 +212,23 @@ cursor: pointer !important;
 
 
 @media screen and (max-width: 800px){
-#local-svg{
+#local-svg, #ethiopia-svg{
     border: 3px solid #425465;
    border-radius: 40px;
 
 }
 }
 
-#local-map{
+#local-map, #ethiopia-map{
     height: 106%;
     width: 106%;
 }
 
-#local-return{
+.inset-return{
     position:absolute;
     font-family: "Montserrat", sans-serif;
     right: 20px;
-    top: 20px;
+    bottom: 20px;
     font-size: 1.5em;
     color: #fff;
     text-decoration: none;
@@ -240,7 +240,7 @@ cursor: pointer !important;
     padding-right: 10px;
 }
 
-#local-return:hover{
+.inset-return:hover{
 background-color: #a13b1a;
 }
 

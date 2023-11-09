@@ -32,10 +32,14 @@ function setMap(){
     if(window.innerHeight*1.335>window.innerWidth){
         document.getElementById("local-svg").style.width="95%";
         document.getElementById("local-svg").style.height="calc(95vw*1/1.335)";
+        document.getElementById("etihiopia-svg").style.width="95%";
+        document.getElementById("ethiopia-svg").style.height="calc(95vw*1/1.335)";
     }
     else{
         document.getElementById("local-svg").style.height="95%";
         document.getElementById("local-svg").style.width="calc(95vh*1.335)"; 
+        document.getElementById("ethiopia-svg").style.height="95%";
+        document.getElementById("ethiopia-svg").style.width="calc(95vh*1.335)"; 
     }
 }
 
@@ -95,7 +99,7 @@ if(pins[i].classList.contains("or-kf")){
 
 
  if(pins[i].classList.contains("inset")){
-    pins[i].setAttribute("href", "pinGray.svg");
+    pins[i].setAttribute("href", "pins/pinGray.svg");
     }
 
 }
@@ -179,7 +183,7 @@ function pinHoverOut(){
 
 
         else if(this.classList.contains("inset")){
-            this.setAttribute("href", "pinGray.svg");
+            this.setAttribute("href", "pins/pinGray.svg");
             }
     else{
         this.setAttribute("href", "pin.svg");
@@ -199,12 +203,19 @@ function setTargetPin(e){
       allMedias=document.getElementsByClassName("info-media");
     if(Math.abs(mouseX-e.clientX)<5&&Math.abs(mouseY-e.clientY)<5){
         if(targetPin=="SF"){
-            document.getElementById("local-animation").style.animation="localIn 0.5s ease 0s"
+            document.getElementById("inset-animation").style.animation="insetIn 0.5s ease 0s"
             setTimeout(function(){
                 document.getElementById("local-container").style.display="flex";
-                document.getElementById("local-animation").style.animation="localOut 0.5s ease 0s"
+                document.getElementById("inset-animation").style.animation="insetOut 0.5s ease 0s"
             },500);
-                }
+         }
+         else if(targetPin="ethiopia"){
+            document.getElementById("inset-animation").style.animation="insetIn 0.5s ease 0s"
+            setTimeout(function(){
+                document.getElementById("ethiopia-container").style.display="flex";
+                document.getElementById("inset-animation").style.animation="insetOut 0.5s ease 0s"
+            },500);
+         }
 
     else{
         info=-1;
@@ -259,12 +270,23 @@ function setTargetPin(e){
     
  }
 
- function closeLocal(){
+ function closeInset(){
     document.getElementById("local-container").style.animation="opacityOut 0.5s linear 0s";
+    document.getElementById("ethiopia-container").style.animation="opacityOut 0.5s linear 0s";
     setTimeout(function(){
         document.getElementById("local-container").style.display="none";
         document.getElementById("local-container").style.animation="";
+        document.getElementById("ethiopia-container").style.display="none";
+        document.getElementById("ethiopia-container").style.animation="";
 
 
     },500);
+ }
+
+ function zoomIn(){
+    panZoom.zoomBy(1.5);
+ }
+
+ function zoomOut(){
+    panZoom.zoomBy(0.66666);
  }
