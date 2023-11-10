@@ -202,14 +202,14 @@ function setTargetPin(e){
      allInfos=document.getElementsByClassName("info-container");
       allMedias=document.getElementsByClassName("info-media");
     if(Math.abs(mouseX-e.clientX)<5&&Math.abs(mouseY-e.clientY)<5){
-        if(targetPin=="SF"){
+        if(targetPin=="Sioux Falls Ministries"){
             document.getElementById("inset-animation").style.animation="insetIn 0.5s ease 0s"
             setTimeout(function(){
                 document.getElementById("local-container").style.display="flex";
                 document.getElementById("inset-animation").style.animation="insetOut 0.5s ease 0s"
             },500);
          }
-         else if(targetPin=="ethiopia"){
+         else if(targetPin=="Ethiopia Ministries"){
             document.getElementById("inset-animation").style.animation="insetIn 0.5s ease 0s"
             setTimeout(function(){
                 document.getElementById("ethiopia-container").style.display="flex";
