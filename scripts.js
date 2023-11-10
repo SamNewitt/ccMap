@@ -32,7 +32,7 @@ function setMap(){
     if(window.innerHeight*1.335>window.innerWidth){
         document.getElementById("local-svg").style.width="95%";
         document.getElementById("local-svg").style.height="calc(95vw*1/1.335)";
-        document.getElementById("etihiopia-svg").style.width="95%";
+        document.getElementById("ethiopia-svg").style.width="95%";
         document.getElementById("ethiopia-svg").style.height="calc(95vw*1/1.335)";
     }
     else{
