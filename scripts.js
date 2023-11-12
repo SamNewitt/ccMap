@@ -49,7 +49,7 @@ function resize(){
 
 
     for(var i=0; i<pins.length; i++){
-    if(pins[i].classList.contains("local-pin")==false){
+    if(pins[i].classList.contains("local-pin")==false && pins[i].classList.contains("ethiopia-pin")==false){
             pins[i].setAttribute("height",pinSize/panZoom.getZoom());
             pins[i].setAttribute("width",pinSize/panZoom.getZoom()*0.69);
          pins[i].setAttribute("y",pins[i].getAttribute("ypos")*height+(window.innerHeight-height)/2-pins[i].getBBox().height);
