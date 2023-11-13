@@ -120,7 +120,7 @@ for(var i=0; i<headings.length; i++)
 
 function pinHoverIn(){
     document.getElementById("tooltip").innerHTML=this.getAttribute("name");
-    document.getElementById("tooltip").style.opacity="1";
+    document.getElementById("tooltip-border").style.opacity="1";
 if(this.classList.contains("or")){
 this.setAttribute("href", "pins/pinRedHover.svg");
 }
@@ -157,7 +157,7 @@ else{
 
 
 function pinHoverOut(){
-    document.getElementById("tooltip").style.opacity="0";
+    document.getElementById("tooltip-border").style.opacity="0";
     if(this.classList.contains("or")){
         this.setAttribute("href", "pins/pinRed.svg");
         }

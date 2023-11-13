@@ -321,15 +321,23 @@ border: 2px solid #fff;
     justify-content:center;
 }
 
+#tooltip-border{
+    background-color: #fff;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
 #tooltip{
-   margin:0;
+   margin:5px;
    font-family:"Montserrat", sans-serif;
 color:#e65525;
 text-decoration: underline;
 font-style: italic;
 font-size:36px;
 transition: 0.5s;
-opacity:0;
+/* opacity:0; */
+font-weight: bold;
 }
 
 @media screen and (max-width:700px)
