@@ -20,25 +20,16 @@ div, img{
 }
 @keyframes infoIn {
     from{
-        height:0;
-        display:none
+        right:-40%;
+        display:none;
     }
     to{
-        height: 90%;
+        right: 0;
         display:flex;
     }
     
 }
-@keyframes infoIn2 {
-    from{
-        height:6%;
-        display:none
-    }
-    to{
-        height: 90%;
-        display:flex;
-    }
-}
+
 
 @keyframes insetIn {
     from{

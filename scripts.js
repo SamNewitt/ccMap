@@ -241,7 +241,7 @@ function setTargetPin(e){
     setTimeout(function(){
         allInfos[info].style.display="flex";
         allInfos[info].style.overflow="hidden";
-       allInfos[info].style.animation="infoIn2 0.5s ease 0s";
+       allInfos[info].style.animation="infoIn 0.5s ease 0s";
     },700);
     setTimeout(function(){
     
