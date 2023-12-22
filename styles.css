@@ -85,8 +85,8 @@ right:-40%;
 }
 
 #info-animate img{
-    width:80%;
-    max-width:400px;
+    width:50%;
+    aspect-ratio: 1;
 }
 
 .info-container{
@@ -142,7 +142,7 @@ right:-40%;
     font-size:0.7em;
     line-height: 2;
     margin:0;
-    padding-bottom:20px;
+    padding-bottom:10px;
     border-bottom: 2px solid #425465;
 }
 
@@ -173,13 +173,13 @@ right:-40%;
     align-items: center;
     flex-wrap: wrap;
     width:95%;
-    padding-top:20px;
+    padding-bottom:20px;
 height:100%;
 opacity: 0;
 }
 
 .info-media img{
-    max-height:175px;
+    max-height:250px;
     max-width:45%;
     padding: 3px;
 }
