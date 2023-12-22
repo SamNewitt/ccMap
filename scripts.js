@@ -244,8 +244,9 @@ function setTargetPin(e){
        allInfos[info].style.animation="infoIn 0.5s ease 0s";
     },700);
     setTimeout(function(){
-    
-       allMedias[info].style.animation="opacityIn 0.5s linear 0s";
+    for(var i=0; i<allMedias.length; i++){
+        allMedias[i].style.animation="opacityIn 0.5s linear 0s";
+    }
        allInfos[info].style.overflow="auto";
     },1200);
     }
@@ -259,7 +260,9 @@ function setTargetPin(e){
     document.getElementById("info").style.animation="opacityOut 0.2s linear 0s";
     document.getElementById("info-animate").style.animation="opacityOut 0s linear 0s";
     allInfos[info].style.animation="opacityOut 0.2s linear 0s";
-    allMedias[info].style.animation="opacityOut 0.2s linear 0s";
+    for(var i=0; i<allMedias.length; i++){
+        allMedias[i].style.animation="";
+    }
     document.getElementById("info-close").style.animation="opacityOut 0.2s linear 0s";
 
     setTimeout(function(){

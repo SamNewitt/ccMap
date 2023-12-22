@@ -82,11 +82,13 @@ right:-40%;
     width:40%;
     height:100%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #info-animate img{
-    width:50%;
-    aspect-ratio: 1;
+    height:60%;
 }
 
 .info-container{
@@ -168,6 +170,7 @@ right:-40%;
 }
 
 .info-media{
+    animation-fill-mode: forwards;
     display: flex;
     justify-content: center;
     align-items: center;
