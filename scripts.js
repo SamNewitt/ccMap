@@ -238,17 +238,17 @@ function setTargetPin(e){
         document.getElementById("info-close").style.display="block";
         document.getElementById("info-animate").style.display="flex";
        document.getElementById("info-close").style.animation="opacityIn 0.2s linear 0s";
-        document.getElementById("info-animate").style.animation="infoIn 0.5s ease 0s";
+        document.getElementById("info-animate").style.animation="infoIn 0.7s ease 0s";
 
     },200);
     setTimeout(function(){
         allInfos[info].style.display="flex";
         allInfos[info].style.overflow="hidden";
-       allInfos[info].style.animation="infoIn 0.5s ease 0s";
+       allInfos[info].style.animation="infoIn 0.9s ease 0s";
        for(var i=0; i<allLogos.length; i++){
         allLogos[i].style.animation="opacityIn 0.2s linear 0s";
     }
-    },700);
+    },800);
     setTimeout(function(){
     for(var i=0; i<allMedias.length; i++){
         allMedias[i].style.animation="opacityIn 0.5s linear 0s";
