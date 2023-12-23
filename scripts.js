@@ -1,6 +1,6 @@
 var height, width, pinSize;
 var targetPin, mouseX, mouseY, mousePrevX, mousePrevY;
-var info, allInfos, allMedias, allCloses;
+var info, allInfos, allMedias, allCloses, allLogos;
 var pins = document.getElementsByClassName("pin");
 
 var panZoom = svgPanZoom('#svg-container');
@@ -204,6 +204,8 @@ function setTargetPin(e){
  function openPin(e){
      allInfos=document.getElementsByClassName("info-container");
       allMedias=document.getElementsByClassName("info-media");
+      allLogos=document.getElementsByClassName("info-logo");
+
     if(Math.abs(mouseX-e.clientX)<5&&Math.abs(mouseY-e.clientY)<5){
         if(targetPin=="Sioux Falls Ministries"){
             document.getElementById("inset-animation").style.animation="insetIn 0.5s ease 0s"
@@ -237,11 +239,15 @@ function setTargetPin(e){
         document.getElementById("info-animate").style.display="flex";
        document.getElementById("info-close").style.animation="opacityIn 0.2s linear 0s";
         document.getElementById("info-animate").style.animation="infoIn 0.5s ease 0s";
+
     },200);
     setTimeout(function(){
         allInfos[info].style.display="flex";
         allInfos[info].style.overflow="hidden";
        allInfos[info].style.animation="infoIn 0.5s ease 0s";
+       for(var i=0; i<allLogos.length; i++){
+        allLogos[i].style.animation="opacityIn 0.2s linear 0s";
+    }
     },700);
     setTimeout(function(){
     for(var i=0; i<allMedias.length; i++){
@@ -262,6 +268,9 @@ function setTargetPin(e){
     allInfos[info].style.animation="opacityOut 0.2s linear 0s";
     for(var i=0; i<allMedias.length; i++){
         allMedias[i].style.animation="";
+    }
+    for(var i=0; i<allLogos.length; i++){
+        allLogos[i].style.animation="";
     }
     document.getElementById("info-close").style.animation="opacityOut 0.2s linear 0s";
 

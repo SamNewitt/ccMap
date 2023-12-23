@@ -188,7 +188,7 @@ opacity: 0;
 }
 
 .info-logo{
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     right: 30px;
     max-height: 65px;
@@ -197,6 +197,7 @@ opacity: 0;
     border-radius: 5px;
     background-color: #fff;
     margin-left: 10px;
+    opacity: 0;
 }
 
 #info-close{
