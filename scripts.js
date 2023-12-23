@@ -70,17 +70,17 @@ pins[i].style.opacity="1";
 pins[i].addEventListener("mouseover",pinHoverIn);
 pins[i].addEventListener("mouseout",pinHoverOut);
 
-if(this.classList.contains("or")){
-    this.setAttribute("href", "pins/pinOrange.svg");
+if(pins[i].classList.contains("or")){
+    pins[i].setAttribute("href", "pins/pinOrange.svg");
     }
-    else if(this.classList.contains("ng")){
-    this.setAttribute("href", "pins/pinCharcoal.svg");
+    else if(pins[i].classList.contains("ng")){
+    pins[i].setAttribute("href", "pins/pinCharcoal.svg");
     }
-    else if(this.classList.contains("kf")){
-    this.setAttribute("href", "pins/pinGreen.svg");
+    else if(pins[i].classList.contains("kf")){
+        pins[i].setAttribute("href", "pins/pinGreen.svg");
     }
-    else if(this.classList.contains("lp")){
-    this.setAttribute("href", "pins/pinBlue.svg");
+    else if(pins[i].classList.contains("lp")){
+        pins[i].setAttribute("href", "pins/pinBlue.svg");
     }
 
 
