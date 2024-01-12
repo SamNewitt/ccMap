@@ -202,6 +202,8 @@ function setTargetPin(e){
     mouseY=e.clientY;
  }
 
+ var zIndex=30;
+
  function openPin(e){
      allInfos=document.getElementsByClassName("info-container");
       allMedias=document.getElementsByClassName("info-media");
@@ -233,15 +235,18 @@ function setTargetPin(e){
     if (info!=-1)
     {
 
-    document.getElementById("info-close").style.display="block";
-    document.getElementById("info-close").style.animation="opacityIn 0.2s linear 0s";
-   
+
+        allInfos[info].style.zIndex=zIndex;
+        zIndex++;
+
         allInfos[info].style.display="flex";
         allInfos[info].style.overflow="hidden";
        allInfos[info].style.animation="infoIn 0.8s ease 0s";
      
   
     setTimeout(function(){
+        document.getElementById("info-close").style.display="block";
+        document.getElementById("info-close").style.animation="opacityIn 0.2s linear 0s";
     for(var i=0; i<allMedias.length; i++){
         allMedias[i].style.animation="opacityIn 0.5s linear 0s";
     }
@@ -259,7 +264,9 @@ function setTargetPin(e){
  }
  function closePin(){
 
-    allInfos[info].style.animation="opacityOut 0.2s linear 0s";
+    for(var i=0; i<allInfos.length; i++){
+    allInfos[i].style.opacity=0;
+    }
     for(var i=0; i<allMedias.length; i++){
         allMedias[i].style.animation="";
     }
@@ -269,9 +276,13 @@ function setTargetPin(e){
     document.getElementById("info-close").style.animation="opacityOut 0.2s linear 0s";
 
     setTimeout(function(){
-        allInfos[info].style.display="none"
-    document.getElementById("info").style.display="none";
-    document.getElementById("info-animate").style.display="none";
+    for(var i=0; i<allInfos.length; i++){
+        allInfos[i].style.display="none";
+    allInfos[i].style.opacity=1;
+    allInfos[i].style.animation="";
+    }
+
+
     document.getElementById("info-close").style.display="none";
     },200);
 
