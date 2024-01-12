@@ -232,30 +232,24 @@ function setTargetPin(e){
     }
     if (info!=-1)
     {
-    document.getElementById("info").style.display="flex";
-    document.getElementById("info").style.animation="opacityIn 0.2s linear 0s";
-    document.getElementById("info-close").style.display="none";
-    setTimeout(function(){
-        document.getElementById("info-close").style.display="block";
-        document.getElementById("info-animate").style.display="flex";
-       document.getElementById("info-close").style.animation="opacityIn 0.2s linear 0s";
-        document.getElementById("info-animate").style.animation="infoIn 0.7s ease 0s";
 
-    },200);
-    setTimeout(function(){
+    document.getElementById("info-close").style.display="block";
+    document.getElementById("info-close").style.animation="opacityIn 0.2s linear 0s";
+   
         allInfos[info].style.display="flex";
         allInfos[info].style.overflow="hidden";
-       allInfos[info].style.animation="infoIn 0.9s ease 0s";
-       for(var i=0; i<allLogos.length; i++){
-        allLogos[i].style.animation="opacityIn 0.2s linear 0s";
-    }
-    },800);
+       allInfos[info].style.animation="infoIn 0.8s ease 0s";
+     
+  
     setTimeout(function(){
     for(var i=0; i<allMedias.length; i++){
         allMedias[i].style.animation="opacityIn 0.5s linear 0s";
     }
+    for(var i=0; i<allLogos.length; i++){
+        allLogos[i].style.animation="opacityIn 0.2s linear 0s";
+    }
        allInfos[info].style.overflow="auto";
-    },1200);
+    },800);
     }
     
 
@@ -264,8 +258,7 @@ function setTargetPin(e){
  
  }
  function closePin(){
-    document.getElementById("info").style.animation="opacityOut 0.2s linear 0s";
-    document.getElementById("info-animate").style.animation="opacityOut 0s linear 0s";
+
     allInfos[info].style.animation="opacityOut 0.2s linear 0s";
     for(var i=0; i<allMedias.length; i++){
         allMedias[i].style.animation="";
