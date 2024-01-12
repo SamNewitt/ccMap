@@ -152,22 +152,22 @@ right:-40%;
 
 
 .info-link{
-    color: #e65525;
+    color: #fff;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .info-link-lowercase{
-    color: #e65525;
+    color: #fff;
     font-weight: bold;  
 }
 
 .info-link:hover{
-    color:#a13b1a;
+    color:#ccc;
 }
 
 .info-link-lowercase:hover{
-    color:#a13b1a;
+    color:#ccc;
 }
 
 .info-media{
