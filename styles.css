@@ -333,15 +333,11 @@ border: 2px solid #fff;
 
 }
 
-#tooltip-container{
-    position:absolute;
-    top: 10px;
-    width:100%;
-    display:flex;
-    justify-content:center;
-}
 
 #tooltip-border{
+    top:10px;
+    left:10px;
+    position: absolute;
     background-color: #fff;
     border-radius: 10px;
     opacity: 0;
