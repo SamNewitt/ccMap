@@ -45,7 +45,7 @@ function setMap(){
 
 function resize(){
     // pinSize=panZoom.getSizes().height/10;
-    pinSize=Math.min(window.innerHeight/13,window.innerWidth/16);
+    pinSize=Math.min(window.innerHeight/24,window.innerWidth/30);
 
 
     for(var i=0; i<pins.length; i++){
