@@ -205,7 +205,7 @@ opacity: 0;
 #info-close{
     position:fixed;
     top:10px;
-    right:5px;
+    right:10px;
     height: 5%;
     opacity: 0;
     z-index: 9999999;
