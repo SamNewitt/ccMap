@@ -1,0 +1,20 @@
+{
+"mapType":"world",
+"category":"lp",
+"kingdomFund":"false",
+"xPosition":"85",
+"yPosition":"50",
+"name":"Shayla Dick",
+"description":"Shayla serves as an Architect and missionary with Engineering Ministries International (EMI) in Phnom Penh, Cambodia. EMI is a Christian non-profit made up of architects, engineers, surveyors, and construction managers who value Design, Discipleship, and Diversity. EMI’s worldwide mission is to develop people, design structures, and construct facilities which serve communities and the Church—facilities like hospitals, schools, water systems, and more. Since joining staff in 2020, Shayla has had the privilege of serving ministries such as CURE Children's Hospital of Zimbabwe with a master plan and clean water system, Bongolo Hospital in Gabon with a design for a Maternity Center, and Church of the Holy Spirit in South Africa with the construction of a new Community Center. Shayla started her journey in ministry during a Central Church Youth Group mission trip to Haiti in 2012. God used this experience in a developing country recovering from a major earthquake to reveal to Shayla the transformative power of architecture, and His desire to use her talents to build His Kingdom and restore the world through design.",
+"links":
+[
+    ["Donate Here","https://emiworld.org/shayla-dick"],
+    ["Contact Shayla","shayla.dick@emiworld.org"]
+],
+"images":
+[
+    "shayla.jpg"
+]
+
+
+}
