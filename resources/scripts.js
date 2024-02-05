@@ -1,6 +1,6 @@
 var height, width, pinSize;
 var targetPin, mouseX, mouseY, mousePrevX, mousePrevY;
-var info, allInfos, allMedias, allCloses, allLogos;
+var info, allInfos, allMedias, allCloses, allLogos, pins;
 
 var panZoom = svgPanZoom('#svg-container');
 
@@ -59,7 +59,7 @@ function resize(){
 
 }
 function init(){
-var pins = document.getElementsByClassName("pin");
+pins = document.getElementsByClassName("pin");
 console.log(pins);
 
     setMap();
