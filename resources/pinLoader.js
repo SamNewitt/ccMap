@@ -24,8 +24,8 @@ pin.setAttribute("xpos","."+pinData.xPosition);
 pin.setAttribute("ypos","."+pinData.yPosition);
 pin.setAttribute("href","");
 pin.setAttribute("name",pinData.name);
-document.getElementById("svg-container").insertBefore(pin,document.getElementById("global-pin-tag"));
-console.log(6);
+document.getElementsByClassName("svg-pan-zoom_viewport")[0].appendChild(pin);
+console.log(7);
 console.log(pin);
 
     });
