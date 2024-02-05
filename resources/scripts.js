@@ -60,7 +60,6 @@ function resize(){
 
 }
 function init(){
-pinLoader();
     setMap();
     resize();
 
