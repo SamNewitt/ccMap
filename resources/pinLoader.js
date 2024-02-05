@@ -83,7 +83,7 @@ if(pinData.images.length>1){
     }
     info.appendChild(media);
 }
-document.insertBefore(document.getElementById("info-marker"),info);
+body.insertBefore(document.getElementById("info-marker"),info);
 }
 
 
