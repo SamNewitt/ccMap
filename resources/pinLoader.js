@@ -38,7 +38,7 @@ switch(pinData.mapType){
 
     break;
 }
-media=createElement("div");
+media=document.createElement("div");
 media.classList.add("info-media");
 info=document.createElement("div")
 info.setAttribute("name",pinData.name);
