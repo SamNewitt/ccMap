@@ -44,8 +44,7 @@ info=document.createElement("div")
 info.setAttribute("name",pinData.name);
 info.classList.add("info-container");
 
-console.log(22);
-console.log(pinData.links[0]);
+console.log(23);
 
 
 
@@ -71,7 +70,8 @@ info.appendChild(elem);
 for(var i=0; i<pinData.links.length;i++){
 elem=document.createElement("a");
 elem.innerHTML=pinData.links[i][0]
-elem.setAttribute("target","_blank").setAttribute("href",pinData.links[i][1]);
+elem.setAttribute("target","_blank");
+elem.setAttribute("href",pinData.links[i][1]);
 elem.classList.add("info-link-lowercase")
 info.appendChild(elem);
 }
