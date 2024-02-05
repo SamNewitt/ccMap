@@ -43,19 +43,19 @@ media.classList.add("info-media");
 info=document.createElement("div")
 info.setAttribute("name",pinData.name);
 info.classList.add("info-container");
-info.appendChild(createElement("h1").innerHTML=pinData.name);
+info.appendChild(document.createElement("h1").innerHTML=pinData.name);
 if(pinData.cornerLogo!=""){
 
 
-info.appendChild(createElement("img").setAttribute("src","../images/"+pinData.cornerLogo).classList.add("info-logo"));
+info.appendChild(document.createElement("img").setAttribute("src","../images/"+pinData.cornerLogo).classList.add("info-logo"));
 }
 if(pinData.images.length=1){
-    media.appendChild(createElement("img").setAttribute('src',"../images/"+pinData.images[0]));
+    media.appendChild(document.createElement("img").setAttribute('src',"../images/"+pinData.images[0]));
     info.appendChild(media);
 }
-info.appendChild(createElement("p").innerHTML=pinData.description);
+info.appendChild(document.createElement("p").innerHTML=pinData.description);
 for(var i=0; i<pinData.links.length;i++){
-info.appendChild((createElement("a").innerHTML=pinData.links[i][0]).setAttribute("target","_blank").setAttribute("href",pinData.links[i][1]).classList.add("info-link-lowercase"));
+info.appendChild((document.createElement("a").innerHTML=pinData.links[i][0]).setAttribute("target","_blank").setAttribute("href",pinData.links[i][1]).classList.add("info-link-lowercase"));
 
 }
 
