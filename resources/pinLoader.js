@@ -43,7 +43,8 @@ media.classList.add("info-media");
 info=document.createElement("div")
 info.setAttribute("name",pinData.name);
 info.classList.add("info-container");
-elem=document.createElement("h1").innerHTML=pinData.name
+elem=document.createElement("h1")
+elem.innerHTML=pinData.name;
 info.appendChild(elem);
 if(pinData.cornerLogo!=""){
 elem=document.createElement("img");
