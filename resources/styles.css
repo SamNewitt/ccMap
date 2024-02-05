@@ -156,7 +156,8 @@ right:-40%;
 
 .info-link-lowercase{
     color: #fff;
-    font-weight: bold;  
+    font-weight: bold; 
+    font-family: "Montserrat", sans-serif;
 }
 
 .info-link:hover{
@@ -180,8 +181,8 @@ opacity: 0;
 }
 
 .info-media img{
-    max-height:250px;
-    max-width:25%;
+    max-height:450px;
+    max-width:75%;
     padding: 3px;
 }
 
