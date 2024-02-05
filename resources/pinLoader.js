@@ -19,13 +19,14 @@ if(pinData.kingdomFund=="true"){
 else{
     pin.classList.add(pinData.category);
 }
-pin.setAttribute("height","10%");
 pin.setAttribute("xpos","."+pinData.xPosition);
 pin.setAttribute("ypos","."+pinData.yPosition);
+pin.setAttribute("height","10%");
+
 pin.setAttribute("href","");
 pin.setAttribute("name",pinData.name);
 document.getElementsByClassName("svg-pan-zoom_viewport")[0].appendChild(pin);
-console.log(16);
+console.log(17);
 console.log(pin);
 
     });
