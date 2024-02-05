@@ -1,21 +1,36 @@
-var fileList,pin;
+var pin;
 
 function pinLoader(){
     fetch('../MASTERLIST.json')
     .then((response) => response.json())
-    .then((json) =>     {
-        fileList=json;
-    });
-
-    console.log(5);
-    console.log(fileList);
+    .then((master) =>     {
 
 
-    for(var i=0; i<fileList.length; i++){
-        fetch('../'+fileList[i])
+    for(var i=0; i<master.fileList.length; i++){
+        fetch('../'+master.fileList[i])
     .then((response) => response.json())
-    .then((json) => pin);
+    .then((pinData) => {
+
+pin=document.createElement("image");
+pin.classList.add("pin");
+if(pinData.kingdomFund){
+    pin.classList.add(pinData.category+"-kf");
+}
+else{
+    pin.classList.add(pinData.category);
+}
+pin.setAttribute("height","10%");
+pin.setAttribute("xpos","."+pinData.xPosition);
+pin.setAttribute("ypos","."+pinData.yPosition);
+pin.setAttribute("href","");
+pin.setAttribute("name",pinData.name);
+document.getElementById("svg-container").appendChild(pin);
+console.log(6);
+    });
 
 
     }
+
+
+});
 }
