@@ -25,7 +25,21 @@ pin.setAttribute("height","10%");
 
 pin.setAttribute("href","");
 pin.setAttribute("name",pinData.name);
-document.getElementsByClassName("svg-pan-zoom_viewport")[0].appendChild(pin);
+switch(pinData.mapType){
+    case "sf":
+    pin.classList.add("local-pin");
+    document.getElementById("local-svg").appendChild(pin);
+    break;
+    case "ethiopia":
+        pin.classList.add("ethiopia-pin");
+        document.getElementById("ethiopia-svg").appendChild(pin);
+    default:
+        document.getElementsByClassName("svg-pan-zoom_viewport")[0].appendChild(pin);
+
+    break;
+}
+
+
 console.log(19);
 console.log(pin);
 
