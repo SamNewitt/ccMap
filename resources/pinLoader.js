@@ -25,7 +25,7 @@ pin.setAttribute("ypos","."+pinData.yPosition);
 pin.setAttribute("href","");
 pin.setAttribute("name",pinData.name);
 document.getElementsByClassName("svg-pan-zoom_viewport")[0].appendChild(pin);
-console.log(10);
+console.log(11);
 console.log(pin);
 
     });
@@ -35,6 +35,8 @@ console.log(pin);
 
 
 });
+
+setTimeout(init,700);
 }
 
 
