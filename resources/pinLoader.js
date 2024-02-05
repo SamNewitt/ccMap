@@ -74,13 +74,22 @@ elem.setAttribute("target","_blank");
 elem.setAttribute("href",pinData.links[i][1]);
 elem.classList.add("info-link-lowercase")
 info.appendChild(elem);
+if(pinData.images.length>1){
+    for(var i=0; i<pinData.images.length;i++)
+    {
+    elem=document.createElement("img");
+    elem.setAttribute('src',"../images/"+pinData.images[i])
+    media.appendChild(elem);
+    }
+    info.appendChild(media);
+}
+document.insertBefore(document.getElementById("info-marker"),info);
 }
 
 
 
 
 
-console.log(info);
 
     });
 
