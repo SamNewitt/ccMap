@@ -13,7 +13,7 @@ function pinLoader(){
 
 pin=document.createElement("image");
 pin.classList.add("pin");
-if(pinData.kingdomFund){
+if(pinData.kingdomFund=="true"){
     pin.classList.add(pinData.category+"-kf");
 }
 else{
@@ -24,8 +24,10 @@ pin.setAttribute("xpos","."+pinData.xPosition);
 pin.setAttribute("ypos","."+pinData.yPosition);
 pin.setAttribute("href","");
 pin.setAttribute("name",pinData.name);
-document.getElementById("svg-container").appendChild(pin);
+document.getElementById("svg-container").insertBefore(pin,document.getElementById("global-pin-tag"));
 console.log(6);
+console.log(pin);
+
     });
 
 
