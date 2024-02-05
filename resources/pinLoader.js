@@ -4,6 +4,9 @@ function pinLoader(){
     fetch('../MASTERLIST.json')
     .then((response) => response.json())
     .then((json) => fileList);
+    
+    console.log(fileList);
+
 
     for(var i=0; i<fileList.length; i++){
         fetch('../'+fileList[i])
@@ -11,6 +14,5 @@ function pinLoader(){
     .then((json) => pin);
 
 
-    console.log(pin)
     }
 }
