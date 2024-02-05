@@ -3,8 +3,9 @@ var fileList,pin;
 function pinLoader(){
     fetch('../MASTERLIST.json')
     .then((response) => response.json())
-    .then((fileList) =>     {
-        console.log(3);
+    .then((json) =>     {
+        console.log(4);
+        fileList=json;
         console.log(fileList);
     
     });
