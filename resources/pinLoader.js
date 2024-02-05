@@ -44,7 +44,9 @@ info=document.createElement("div")
 info.setAttribute("name",pinData.name);
 info.classList.add("info-container");
 
-console.log(21);
+console.log(22);
+console.log(pinData.links[0]);
+
 
 
 elem=document.createElement("h1");
