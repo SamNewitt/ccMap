@@ -43,9 +43,14 @@ media.classList.add("info-media");
 info=document.createElement("div")
 info.setAttribute("name",pinData.name);
 info.classList.add("info-container");
-elem=document.createElement("h1")
+
+console.log(21);
+
+
+elem=document.createElement("h1");
 elem.innerHTML=pinData.name;
 info.appendChild(elem);
+
 if(pinData.cornerLogo!=""){
 elem=document.createElement("img");
 elem.setAttribute("src","../images/"+pinData.cornerLogo)
@@ -73,7 +78,6 @@ info.appendChild(elem);
 
 
 
-console.log(20);
 console.log(info);
 
     });
