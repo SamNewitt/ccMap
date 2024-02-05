@@ -44,7 +44,7 @@ info=document.createElement("div")
 info.setAttribute("name",pinData.name);
 info.classList.add("info-container");
 
-console.log(23);
+console.log(24);
 
 
 
@@ -83,7 +83,7 @@ if(pinData.images.length>1){
     }
     info.appendChild(media);
 }
-document.querySelector("body").insertBefore(document.getElementById("info-marker"),info);
+document.querySelector("body").insertBefore(info,document.getElementById("info-marker"));
 }
 
 
