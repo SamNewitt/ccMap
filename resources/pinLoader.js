@@ -11,7 +11,7 @@ function pinLoader(){
     .then((response) => response.json())
     .then((pinData) => {
 
-pin=document.createElementNS("image");
+pin=document.createElementNS("http://www.w3.org/2000/svg","image");
 pin.classList.add("pin");
 if(pinData.kingdomFund=="true"){
     pin.classList.add(pinData.category+"-kf");
@@ -26,7 +26,7 @@ pin.setAttribute("height","10%");
 pin.setAttribute("href","");
 pin.setAttribute("name",pinData.name);
 document.getElementsByClassName("svg-pan-zoom_viewport")[0].appendChild(pin);
-console.log(18);
+console.log(19);
 console.log(pin);
 
     });
