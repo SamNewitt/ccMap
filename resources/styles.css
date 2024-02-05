@@ -112,11 +112,7 @@ right:-40%;
     display: none;
 }
 
-.info-title{
-    width:100%;
-    display: flex;
-    justify-content: center;
-}
+
 .info-container h1{
     text-transform: capitalize;
     color:#fff;
@@ -184,8 +180,8 @@ opacity: 0;
 }
 
 .info-media img{
-    max-height:450px;
-    max-width:75%;
+    max-height:250px;
+    max-width:25%;
     padding: 3px;
 }
 

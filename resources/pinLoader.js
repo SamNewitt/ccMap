@@ -1,4 +1,4 @@
-var pin;
+var pin,info,media;
 
 function pinLoader(){
     fetch('../MASTERLIST.json')
@@ -38,10 +38,33 @@ switch(pinData.mapType){
 
     break;
 }
+media=createElement("div");
+media.classList.add("info-media");
+info=document.createElement("div")
+info.setAttribute("name",pinData.name);
+info.className.add("info-container");
+info.appendChild(createElement("h1").innerHTML=pinData.name);
+if(pinData.cornerLogo!=""){
 
 
-console.log(19);
-console.log(pin);
+info.appendChild(createElement("img").setAttribute("src","../images/"+pinData.cornerLogo).classList.add("info-logo"));
+}
+if(pinData.images.length=1){
+    media.appendChild(createElement("img").setAttribute('src',"../images/"+pinData.images[0]));
+    info.appendChild(media);
+}
+info.appendChild(createElement("p").innerHTML=pinData.description);
+for(var i=0; i<pinData.links.length;i++){
+info.appendChild((createElement("a").innerHTML=pinData.links[i][0]).setAttribute("target","_blank").setAttribute("href",pinData.links[i][1]).classList.add("info-link-lowercase"));
+
+}
+
+
+
+
+
+console.log(20);
+console.log(info);
 
     });
 
