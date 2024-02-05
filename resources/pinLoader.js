@@ -42,7 +42,7 @@ media=document.createElement("div");
 media.classList.add("info-media");
 info=document.createElement("div")
 info.setAttribute("name",pinData.name);
-info.className.add("info-container");
+info.classList.add("info-container");
 info.appendChild(createElement("h1").innerHTML=pinData.name);
 if(pinData.cornerLogo!=""){
 
