@@ -1,4 +1,4 @@
-var pin,info,media;
+var pin,info,media,elem;
 
 function pinLoader(){
     fetch('../MASTERLIST.json')
@@ -43,20 +43,29 @@ media.classList.add("info-media");
 info=document.createElement("div")
 info.setAttribute("name",pinData.name);
 info.classList.add("info-container");
-info.appendChild(document.createElement("h1").innerHTML=pinData.name);
+document.createElement("h1").innerHTML=pinData.name
+info.appendChild(elem);
 if(pinData.cornerLogo!=""){
-
-
-info.appendChild(document.createElement("img").setAttribute("src","../images/"+pinData.cornerLogo).classList.add("info-logo"));
+elem=document.createElement("img");
+elem.setAttribute("src","../images/"+pinData.cornerLogo)
+elem.classList.add("info-logo")
+info.appendChild(elem);
 }
 if(pinData.images.length=1){
-    media.appendChild(document.createElement("img").setAttribute('src',"../images/"+pinData.images[0]));
+    elem=document.createElement("img");
+    elem.setAttribute('src',"../images/"+pinData.images[0])
+    media.appendChild(elem);
     info.appendChild(media);
 }
-info.appendChild(document.createElement("p").innerHTML=pinData.description);
+elem=document.createElement("p");
+elem.innerHTML=pinData.description
+info.appendChild(elem);
 for(var i=0; i<pinData.links.length;i++){
-info.appendChild((document.createElement("a").innerHTML=pinData.links[i][0]).setAttribute("target","_blank").setAttribute("href",pinData.links[i][1]).classList.add("info-link-lowercase"));
-
+elem=document.createElement("a");
+elem.innerHTML=pinData.links[i][0]
+elem.setAttribute("target","_blank").setAttribute("href",pinData.links[i][1]);
+elem.classList.add("info-link-lowercase")
+info.appendChild(elem);
 }
 
 
