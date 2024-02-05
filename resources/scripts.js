@@ -61,8 +61,11 @@ function resize(){
 }
 function init(){
 pinLoader();
-setMap();
-resize();
+setTimeout(500, function(){
+    setMap();
+    resize();
+});
+
 
 for(var i=0; i<pins.length; i++){
 
