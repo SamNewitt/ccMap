@@ -7,6 +7,7 @@ function pinLoader(){
 
 
     for(var i=0; i<master.fileList.length; i++){
+        console.log("fetch ../"+master.fileList[i])
         fetch('../'+master.fileList[i])
     .then((response) => response.json())
     .then((pinData) => {
