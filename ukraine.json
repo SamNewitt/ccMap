@@ -1,0 +1,21 @@
+{
+"mapType":"world",
+"category":"or",
+"kingdomFund":"true",
+"xPosition":"30",
+"yPosition":"55",
+"name":"Ukraine",
+"description":"In 2022, The Kingdom Fund and the Elders gave a financial gift of $25,000 for food and care for Ukrainian pastors in response to the crisis in Ukraine caused by the Russian invasion. We did this in conjunction with other Converge Heartland churches from our area."
+"links":
+[
+    ["Donate Here","https://www.convergeheartland.org/missions"],
+    ["Learn more about Converge Heartland",""]
+],
+"images":
+[
+    "___.jpg"
+],
+"cornerLogo":"ch.jpg"
+
+
+}

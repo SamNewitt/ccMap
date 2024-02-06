@@ -1,0 +1,23 @@
+{
+"mapType":"world",
+"category":"lp",
+"kingdomFund":"false",
+"xPosition":"20",
+"yPosition":"38",
+"name":"Tim and Sheila Steele",
+"description":"Tim and Sheila Steele serve as a Divisional Manager and Operations for Live Events for FamilyLife, a division of the interdenominational, parachurch Cru, which focuses on marriage, parental ministry. The mission of this ministry is to equip and develop Godly marriages and families to change the world. Beyond this ministry, Tim and Sheila mentor and disciple married couples and lead other FamilyLife events."
+"links":
+[
+    ["Read more and Donate","https://give.cru.org/0556610"],
+    ["Contact Tim","TSteele@FamilyLife.com"],
+["Contact Sheila","SSteele@FamilyLife.com"],
+
+],
+"images":
+[
+    "steele.jpg"
+],
+"cornerLogo":"_.jpg"
+
+
+}
