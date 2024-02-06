@@ -95,13 +95,11 @@ console.log("pin loaded");
 
     }
 
-
-})
+init();
+});
 
 
 }
 
 
 pinLoader();
-await pinLoader();
-init();
