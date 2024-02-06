@@ -1,0 +1,21 @@
+{
+"mapType":"world",
+"category":"cp",
+"kingdomFund":"true",
+"xPosition":"22",
+"yPosition":"31",
+"name":"Hope Harbor",
+"description":"Hope Harbor offers family-style care for teens as they heal from a variety of issues that are unfortunately commonplace for youth today. These include past abuse, trauma, anger, substance use, mental health issues, exploitation, self-harm, suicidal ideation, anxiety, attachment issues, and more. They work with ordinary kids who are healing from extraordinary things; each one a child of God, loved by the Savior.<br><i>Central's Involvement:</i>The Kingdom Fund and Elders voted to use Central’s tithes and offerings to help Hope Harbor with innovative staff trainings and ongoing ministry costs in 2023.<br><i>How You Can Get Involved:</i>Hope Harbor’s Parker facility is large and is always in need of all kinds of volunteers. To find out more, reach out to the Site Director Amanda Dent at amanda.dent@hopeharbormn.org",
+"links":
+[
+    ["Donate Here","https://hopeharbormn.org/donate"],
+    ["Learn more about Hope Harbor","https://hopeharbormn.org"]
+],
+"images":
+[
+    "___.jpg"
+],
+"cornerLogo":"hh.jpg"
+
+
+}
