@@ -66,13 +66,20 @@ if(pinData.images.length=1&&!pinData.images[0].includes("_")){
 elem=document.createElement("p");
 elem.innerHTML=pinData.description
 info.appendChild(elem);
+
+
 for(var i=0; i<pinData.links.length;i++){
+if(pinData.links[i][1]!=""){
 elem=document.createElement("a");
 elem.innerHTML=pinData.links[i][0]
 elem.setAttribute("target","_blank");
 elem.setAttribute("href",pinData.links[i][1]);
 elem.classList.add("info-link-lowercase")
 info.appendChild(elem);
+}
+}
+
+
 if(pinData.images.length>1){
     for(var i=0; i<pinData.images.length;i++)
     {
@@ -83,7 +90,7 @@ if(pinData.images.length>1){
     info.appendChild(media);
 }
 document.querySelector("body").insertBefore(info,document.getElementById("info-marker"));
-}
+
 
 
 
@@ -95,7 +102,7 @@ console.log("pin loaded");
 
     }
 
-init();
+setTimeout(init,500);
 });
 
 
