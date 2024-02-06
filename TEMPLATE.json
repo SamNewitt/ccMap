@@ -1,0 +1,21 @@
+{
+"mapType":"world",
+"category":"cp",
+"kingdomFund":"true",
+"xPosition":"",
+"yPosition":"",
+"name":"",
+"description":"",
+"links":
+[
+    ["Donate Here",""],
+    ["Contact ",""]
+],
+"images":
+[
+    "___.jpg"
+],
+"cornerLogo":"hh.jpg"
+
+
+}
