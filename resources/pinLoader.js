@@ -96,10 +96,12 @@ document.querySelector("body").insertBefore(info,document.getElementById("info-m
     }
 
 
-});
+})
+.then(init());
+
+setTimeout
 
 }
 
 
 pinLoader();
-init();
