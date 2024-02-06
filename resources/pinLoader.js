@@ -91,7 +91,7 @@ document.querySelector("body").insertBefore(info,document.getElementById("info-m
 
 
     });
-
+console.log("pin loaded");
 
     }
 
