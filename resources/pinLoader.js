@@ -57,7 +57,7 @@ elem.setAttribute("src","../images/"+pinData.cornerLogo)
 elem.classList.add("info-logo")
 info.appendChild(elem);
 }
-if(pinData.images.length=1){
+if(pinData.images.length=1&&!pinData.images[0].includes("_")){
     elem=document.createElement("img");
     elem.setAttribute('src',"../images/"+pinData.images[0])
     media.appendChild(elem);
