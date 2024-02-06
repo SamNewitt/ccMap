@@ -44,7 +44,6 @@ info=document.createElement("div")
 info.setAttribute("name",pinData.name);
 info.classList.add("info-container");
 
-console.log(24);
 
 
 
@@ -103,3 +102,4 @@ document.querySelector("body").insertBefore(info,document.getElementById("info-m
 
 
 pinLoader();
+init();
