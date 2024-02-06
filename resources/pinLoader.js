@@ -97,11 +97,11 @@ console.log("pin loaded");
 
 
 })
-.then(init());
 
-setTimeout
 
 }
 
 
 pinLoader();
+await pinLoader();
+init();
