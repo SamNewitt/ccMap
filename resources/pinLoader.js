@@ -1,5 +1,7 @@
 var pin,info,media,elem;
 
+var descStart, descEnd, desc;
+
 function pinLoader(){
     fetch('../MASTERLIST.json')
     .then((response) => response.json())
@@ -7,14 +9,23 @@ function pinLoader(){
 
 
     for(var i=0; i<master.fileList.length; i++){
-        console.log("fetch ../"+master.fileList[i])
         fetch('../'+master.fileList[i])
-    .then((response) => response.json())
-    .then((pinData) => {
+    .then((response) => response.text())
+    .then((pinString) => {
+
+descStart=pinString.indexOf("\"description\"")+15;
+descEnd=pinString.indexOf("\"links\"")-4;
+desc=pinString.substring(descStart,descEnd);
+
+pinString=pinString.replace(desc, "");
+
+desc=desc.replace(/(?:\r\n|\r|\n)/g, '<br>')
+
+
+pinData=JSON.parse(pinString);
 
 pin=document.createElementNS("http://www.w3.org/2000/svg","image");
 pin.classList.add("pin");
-pinData=JSON.parse(JSON.stringify(pinData));
 
 if(pinData.kingdomFund=="true"){
     pin.classList.add(pinData.category+"-kf");
@@ -67,7 +78,7 @@ if(pinData.images.length=1&&!pinData.images[0].includes("_")){
     info.appendChild(media);
 }
 elem=document.createElement("p");
-elem.innerHTML=pinData.description
+elem.innerHTML=desc;
 info.appendChild(elem);
 
 
@@ -101,7 +112,6 @@ document.querySelector("body").insertBefore(info,document.getElementById("info-m
 
 
     });
-console.log("pin loaded");
 
     }
 

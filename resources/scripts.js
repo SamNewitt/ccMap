@@ -61,8 +61,6 @@ function resize(){
 function init(){
 pins = document.getElementsByClassName("pin");
 
-console.log("pins array made");
-console.log(pins);
 
     setMap();
     resize();
