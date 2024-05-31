@@ -87,7 +87,12 @@ if(pinData.links[i][1]!=""){
 elem=document.createElement("a");
 elem.innerHTML=pinData.links[i][0]
 elem.setAttribute("target","_blank");
+if(pinData.links[i][1].includes("@")){
+    elem.setAttribute("href", "mailto:"+pinData.links[i][1])
+}
+else{
 elem.setAttribute("href",pinData.links[i][1]);
+}
 elem.classList.add("info-link-lowercase")
 info.appendChild(elem);
 }
