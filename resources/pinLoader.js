@@ -24,6 +24,7 @@ desc=desc.replace(/(?:\r\n|\r|\n)/g, '<br>')
 
 pinData=JSON.parse(pinString);
 
+
 pin=document.createElementNS("http://www.w3.org/2000/svg","image");
 pin.classList.add("pin");
 
@@ -49,7 +50,6 @@ switch(pinData.mapType){
         document.getElementById("ethiopia-svg").appendChild(pin);
     default:
         document.getElementsByClassName("svg-pan-zoom_viewport")[0].appendChild(pin);
-
     break;
 }
 media=document.createElement("div");
@@ -111,12 +111,12 @@ document.querySelector("body").insertBefore(info,document.getElementById("info-m
 
 
 
-    });
+    }).then(() => init());
+
 
     }
 
-setTimeout(init,500);
-});
+})
 
 
 }
