@@ -9,19 +9,13 @@ function pinLoader(){
     for(var i=0; i<master.fileList.length; i++){
         console.log("fetch ../"+master.fileList[i])
         fetch('../'+master.fileList[i])
-    .then((response) => response.replace(/\\n/g, "\\n")
-    .replace(/\\'/g, "\\'")
-    .replace(/\\"/g, '\\"')
-    .replace(/\\&/g, "\\&")
-    .replace(/\\r/g, "\\r")
-    .replace(/\\t/g, "\\t")
-    .replace(/\\b/g, "\\b")
-    .replace(/\\f/g, "\\f"))
     .then((response) => response.json())
     .then((pinData) => {
 
 pin=document.createElementNS("http://www.w3.org/2000/svg","image");
 pin.classList.add("pin");
+pinData=JSON.parse(JSON.stringify(pinData));
+
 if(pinData.kingdomFund=="true"){
     pin.classList.add(pinData.category+"-kf");
 }
