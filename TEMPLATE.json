@@ -13,9 +13,9 @@
 ],
 "images":
 [
-    "___.jpg"
+    "images/___.jpg"
 ],
-"cornerLogo":"hh.jpg"
+"cornerLogo":"images/___.jpg"
 
 
 }
