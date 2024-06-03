@@ -13,16 +13,19 @@ function pinLoader(){
     .then((response) => response.text())
     .then((pinString) => {
 
-descStart=pinString.indexOf("\"description\"")+15;
-descEnd=pinString.indexOf("\"links\"")-4;
-desc=pinString.substring(descStart,descEnd);
+descStart=pinString.indexOf("description")+13;
+desc=pinString.substring(descStart);
+descEnd=desc.indexOf("\'");
+desc=desc.substring(0,descEnd);
+
 
 pinString=pinString.replace(desc, "");
+console.log(pinString)
 
 desc=desc.replace(/(?:\r\n|\r|\n)/g, '<br>')
 
 
-pinData=JSON.parse(pinString);
+pinData=JSON5.parse(pinString);
 
 
 pin=document.createElementNS("http://www.w3.org/2000/svg","image");
