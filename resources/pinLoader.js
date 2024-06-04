@@ -3,7 +3,7 @@ var pin,info,media,elem;
 var descStart, descEnd, desc;
 
 function pinLoader(){
-    fetch('../MASTERLIST.json')
+    fetch('../_PINLIST.json')
     .then((response) => response.json())
     .then((master) =>     {
 

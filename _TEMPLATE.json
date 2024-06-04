@@ -1,37 +1,35 @@
 {
-//CENTRAL MAP PIN DATA FILE TEMPLATE
+//CENTRAL MAP PIN DATA FILE TEMPLATE --- MAKE A COPY OF THIS AND FILL IN DATA
 //Everything noted by double slashes is a note. Data goes inside the quotes after the colon
 //MAKE SURE TO ADD THIS FILE TO '_PINLIST.json' SO IT IS ADDED TO THE MAP
 
 
 //Which map should the pin be on?      
 //'world' -- 'sf' (Sioux Falls) -- or 'ethiopia'
-mapType:'world',
+mapType:   '##',
 
 
 //Which color category?
 //'or' (Outreach) -- 'cp' (Community Partner) -- 'ip' (International partner) -- or 'lp' (Legacy Partner)
-category:'lp',
+category:   '##',
 
 
 //Should the pin have a circle in the middle for kingdom fund?
 //'true' or 'false'
-kingdomFund:'false',
+kingdomFund:   'false',
 
 
 //Position on the map grid (see KEY files for reference)
-xPosition:'20',
-yPosition:'38',
+xPosition:  '##',
+yPosition:  '##',
 
 
 //Title of the ministry (in)
-name:'Tim and Sheila Steele',
+name:   'EXAMPLE',
 
 
-//Body text (HTML Markup tags can be used to format text, if desired)
-description:"Tim and Sheila Steele serve as a Divisional Manager and Operations for Live Events for FamilyLife, a division of the interdenominational parachurch Cru, which focuses on marriage, parental ministry. 
-
-The mission of this ministry is to equip and develop Godly marriages and families to change the world. Beyond this ministry, Tim and Sheila mentor and disciple married couples and lead other FamilyLife events.",
+//Body text (Can be multiple lines. HTML Markup tags can be used to format text, if desired)
+description:  "EXAMPLE",
 
 
 
@@ -42,10 +40,10 @@ The mission of this ministry is to equip and develop Godly marriages and familie
 //Leave 'EXAMPLE LINK' if not needed to be used
 links:
 [
-    ['Read more and Donate','https://give.cru.org/0556610'],
-    ['Contact Tim','TSteele@FamilyLife.com'],
-    ['Contact Sheila','SSteele@FamilyLife.com']
-
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL'],
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL'],
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL'],
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL']
 ],
 
 
@@ -54,7 +52,10 @@ links:
 //Leave as EXAMPLE.png if not needed
 images:
 [
-    'images/steele.png'
+    'images/EXAMPLE.png',
+    'images/EXAMPLE.png',
+    'images/EXAMPLE.png',
+    'images/EXAMPLE.png'
 ],
 
 
