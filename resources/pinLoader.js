@@ -67,9 +67,7 @@ info.classList.add("info-container");
 elem=document.createElement("h1");
 elem.innerHTML=pinData.name;
 info.appendChild(elem);
-
-
-            if(!pinData.cornerLogo.includes("_")){
+            if(!pinData.cornerLogo.includes("EXAMPLE")){
                 elem=document.createElement("img");
                  elem.setAttribute('src',"../"+pinData.cornerLogo)
                  elem.classList.add("info-logo");
@@ -79,7 +77,7 @@ info.appendChild(elem);
             if(pinData.images.length>0){
                 for(var i=0; i<pinData.images.length;i++)
                 {
-                        if(!pinData.images[i].includes("_")){
+                        if(!pinData.images[i].includes("EXAMPLE")){
                             elem=document.createElement("img");
                         elem.setAttribute('src',"../"+pinData.images[i])
                         media.appendChild(elem);
@@ -94,7 +92,7 @@ info.appendChild(elem);
 
 
 for(var i=0; i<pinData.links.length;i++){
-if(pinData.links[i][1]!=""){
+if(pinData.links[i][1]!=""&& !pinData.links[i][1].includes("EXAMPLE")){
 elem=document.createElement("a");
 elem.innerHTML=pinData.links[i][0]
 elem.setAttribute("target","_blank");

@@ -1,29 +1,66 @@
 {
+//CENTRAL MAP PIN DATA FILE TEMPLATE
+//Everything noted by double slashes is a note. Data goes inside the single quotes
+
+
+//Which map should the pin be on?      
+//'world' -- 'sf' (Sioux Falls) -- or 'ethiopia'
 mapType:'world',
+
+
+//Which color category?
+//'or' (Outreach) -- 'cp' (Community Partner) -- 'ip' (International partner) -- or 'lp' (Legacy Partner)
 category:'lp',
+
+
+//Should the pin have a circle in the middle for kingdom fund?
+//'true' or 'false'
 kingdomFund:'false',
+
+
+//Position on the map grid (see KEY files for reference)
 xPosition:'20',
 yPosition:'38',
+
+
+//Title of the ministry (in 'single quotes')
 name:'Tim and Sheila Steele',
 
+
+//Body text (HTML Markup tags can be used to format text, if desired)
 description:'Tim and Sheila Steele serve as a Divisional Manager and Operations for Live Events for FamilyLife, a division of the interdenominational parachurch Cru, which focuses on marriage, parental ministry. 
 
 The mission of this ministry is to equip and develop Godly marriages and families to change the world. Beyond this ministry, Tim and Sheila mentor and disciple married couples and lead other FamilyLife events.',
 
 
+
+//Hyperlinks to be inserted below the text (e.g. donate, or contact)
+//Links can be url's (with HTTPS) or email addresses
+//Put the text to be displayed int he
+//More can be added if needed (follow the format)
+//Leave 'EXAMPLE LINK' if not needed to be used
 links:
 [
     ['Read more and Donate','https://give.cru.org/0556610'],
     ['Contact Tim','TSteele@FamilyLife.com'],
-['Contact Sheila','SSteele@FamilyLife.com']
+    ['Contact Sheila','SSteele@FamilyLife.com']
 
 ],
 
+
+//Large images to appear in the textbox (put the path to the file in the quotes)
+//More can be added if needed (follow the format)
+//Leave as EXAMPLE.png if not needed
 images:
 [
     'images/steele.png'
 ],
-cornerLogo:'_.jpg'
+
+
+
+//Small logo to appear in the corner of the panel (e.g. organization logo)
+//Leave as EXAMPLE.png if not needed
+cornerLogo:'images/EXAMPLE.png'
 
 
 }
