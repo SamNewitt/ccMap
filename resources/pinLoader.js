@@ -15,8 +15,9 @@ function pinLoader(){
 
 descStart=pinString.indexOf("description")+13;
 desc=pinString.substring(descStart);
-descEnd=desc.indexOf("\'");
+descEnd=desc.indexOf("\"");
 desc=desc.substring(0,descEnd);
+
 
 
 pinString=pinString.replace(desc, "");

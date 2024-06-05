@@ -6,7 +6,7 @@
 
 //Which map should the pin be on?      
 //'world' -- 'sf' (Sioux Falls) -- or 'ethiopia'
-mapType:   '##',
+mapType:   '###',
 
 
 //Which color category?
@@ -16,15 +16,15 @@ category:   '##',
 
 //Should the pin have a circle in the middle for kingdom fund?
 //'true' or 'false'
-kingdomFund:   'false',
+kingdomFund:   '##',
 
 
-//Position on the map grid (see KEY files for reference)
+//Position on the map grid (see KEY files for reference - each value ranges from 0-100)
 xPosition:  '##',
 yPosition:  '##',
 
 
-//Title of the ministry (in)
+//Title of the ministry
 name:   'EXAMPLE',
 
 

@@ -37,15 +37,15 @@ How You Can Get Involved: Hope Harbor’s Parker facility is large and is always
 
 
 
-//Hyperlinks to be inserted below the text (e.g. donate or contact)
+//Hyperlinks to be inserted below the text (e.g. donate, or contact)
 //Links can be url's (with HTTPS) or email addresses
 //Put the text to be displayed int he
 //More can be added if needed (follow the format)
 //Leave 'EXAMPLE LINK' if not needed to be used
 links:
 [
-    ['Learn more about Hope Harbor'  ,  'https://hopeharbormn.org'],
-    ['Donate here'  ,  'https://hopeharbormn.org/donate'],
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL'],
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL'],
     ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL'],
     ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL']
 ],
@@ -66,7 +66,7 @@ images:
 
 //Small logo to appear in the corner of the panel (e.g. organization logo)
 //Leave as EXAMPLE.png if not needed
-cornerLogo:'images/hh.png'
+cornerLogo:'images/EXAMPLE.png'
 
 
 }

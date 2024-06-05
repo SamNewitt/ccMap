@@ -19,7 +19,7 @@ category:'lp',
 kingdomFund:'false',
 
 
-//Position on the map grid (see KEY files for reference)
+//Position on the map grid (see KEY files for reference - each value ranges from 0-100)
 xPosition:'20',
 yPosition:'38',
 
@@ -35,7 +35,7 @@ The mission of this ministry is to equip and develop Godly marriages and familie
 
 
 
-//Hyperlinks to be inserted below the text (e.g. donate, or contact)
+//Hyperlinks to be inserted below the text (e.g. donate or contact)
 //Links can be url's (with HTTPS) or email addresses
 //Put the text to be displayed int he
 //More can be added if needed (follow the format)
