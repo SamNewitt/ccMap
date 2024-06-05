@@ -19,9 +19,11 @@ category:   'cp',
 kingdomFund:   'true',
 
 
+
 //Position on the map grid (see KEY files for reference - each value ranges from 0-100)
-xPosition:  '17.5',
-yPosition:  '30',
+xPosition:  '23.5',
+yPosition:  '32.5',
+
 
 
 //Title of the ministry

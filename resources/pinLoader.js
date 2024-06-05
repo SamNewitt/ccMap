@@ -13,15 +13,15 @@ function pinLoader(){
     .then((response) => response.text())
     .then((pinString) => {
 
-descStart=pinString.indexOf("description")+13;
+descStart=pinString.indexOf("description")+15;
 desc=pinString.substring(descStart);
+
 descEnd=desc.indexOf("\"");
 desc=desc.substring(0,descEnd);
 
 
 
 pinString=pinString.replace(desc, "");
-console.log(pinString)
 
 desc=desc.replace(/(?:\r\n|\r|\n)/g, '<br>')
 
@@ -38,8 +38,8 @@ if(pinData.kingdomFund=="true"){
 else{
     pin.classList.add(pinData.category);
 }
-pin.setAttribute("xpos","."+pinData.xPosition);
-pin.setAttribute("ypos","."+pinData.yPosition);
+pin.setAttribute("xpos","."+pinData.xPosition.replace(".",""));
+pin.setAttribute("ypos","."+pinData.yPosition.replace(".",""));
 pin.setAttribute("height","10%");
 
 pin.setAttribute("href","");
