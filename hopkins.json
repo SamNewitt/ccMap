@@ -1,0 +1,75 @@
+{
+//CENTRAL MAP PIN DATA FILE TEMPLATE --- MAKE A COPY OF THIS AND FILL IN DATA
+//Everything noted by double slashes is a note. Data goes inside the quotes after the colon
+//MAKE SURE TO ADD THIS FILE TO '_PINLIST.json' SO IT IS ADDED TO THE MAP
+
+
+//Which map should the pin be on?      
+//'world' -- 'sf' (Sioux Falls) -- or 'ethiopia'
+mapType:   'world',
+
+
+//Which color category?
+//'or' (Outreach) -- 'cp' (Community Partner) -- 'ip' (International partner) -- or 'lp' (Legacy Partner)
+category:   'lp',
+
+
+//Should the pin have a circle in the middle for kingdom fund?
+//'true' or 'false'
+kingdomFund:   'false',
+
+
+//Position on the map grid (see KEY files for reference - each value ranges from 0-100)
+xPosition:  '45',
+yPosition:  '50',
+
+
+//Title of the ministry
+name:   'Jason and Linda Hopkins',
+
+
+//Body text (Can be multiple lines. HTML Markup tags can be used to format text, if desired)
+description:  "Jason Hopkins is one of very few Sign Language Bible Translation Consultants worldwide. His passion is to help sign language translators create translations that communicate God's Word clearly, accurately and naturally in the various sign languages, giving the Deaf the opportunity to see the Bible in their own language.
+
+The Hopkins currently work with a team of Deaf Ghanaians to translate the Bible into their sign language. The goal is to produce scriptures that will be used by the Deaf in Ghana for their spiritual growth.
+
+Jason’s main roles are exegete and team mentor. Exegeting scriptures for translation requires a wide range of skills that are developed over time with a significant amount of training. A major goal is to help train the team to do as much as possible on their own so they can reach independence. The more skills and abilities they have the more ownership the Deaf community has over the translation work. While doing the exegesis for the project, Jason is also training the team to take over exegesis.
+
+If you’d like to get their newsletters or information about how to support them financially check out their website.
+",
+
+
+
+//Hyperlinks to be inserted below the text (e.g. donate, or contact)
+//Links can be url's (with HTTPS) or email addresses
+//Put the text to be displayed in the first set of quotes
+//More can be added if needed (follow the format)
+//Leave 'EXAMPLE LINK' if not needed to be used
+links:
+[
+    ['Website'  ,  'www.tinyurl.com/wycliffe-hop-signup'],
+    ['Newsletter'  ,  'https://tinyurl.com/wycliffe-hop-newsletters'],
+    ['Deaf Bible - Ghana'  ,  'https://deafbible.com/GSLBBB'],
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL']
+],
+
+
+//Large images to appear in the textbox (put the path to the file in the quotes)
+//More can be added if needed (follow the format)
+//Leave as EXAMPLE.png if not needed
+images:
+[
+    'images/hopkins.png',
+    'images/EXAMPLE.png',
+    'images/EXAMPLE.png',
+    'images/EXAMPLE.png'
+],
+
+
+
+//Small logo to appear in the corner of the panel (e.g. organization logo)
+//Leave as EXAMPLE.png if not needed
+cornerLogo:'images/EXAMPLE.png'
+
+
+}

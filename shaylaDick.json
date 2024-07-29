@@ -1,21 +1,68 @@
 {
-"mapType":"world",
-"category":"lp",
-"kingdomFund":"false",
-"xPosition":"85",
-"yPosition":"50",
-"name":"Shayla Dick",
-"description":"Shayla serves as an Architect and missionary with Engineering Ministries International (EMI) in Phnom Penh, Cambodia. EMI is a Christian non-profit made up of architects, engineers, surveyors, and construction managers who value Design, Discipleship, and Diversity. EMI’s worldwide mission is to develop people, design structures, and construct facilities which serve communities and the Church—facilities like hospitals, schools, water systems, and more. Since joining staff in 2020, Shayla has had the privilege of serving ministries such as CURE Children's Hospital of Zimbabwe with a master plan and clean water system, Bongolo Hospital in Gabon with a design for a Maternity Center, and Church of the Holy Spirit in South Africa with the construction of a new Community Center. Shayla started her journey in ministry during a Central Church Youth Group mission trip to Haiti in 2012. God used this experience in a developing country recovering from a major earthquake to reveal to Shayla the transformative power of architecture, and His desire to use her talents to build His Kingdom and restore the world through design.",
-"links":
+//CENTRAL MAP PIN DATA FILE TEMPLATE --- MAKE A COPY OF THIS AND FILL IN DATA
+//Everything noted by double slashes is a note. Data goes inside the quotes after the colon
+//MAKE SURE TO ADD THIS FILE TO '_PINLIST.json' SO IT IS ADDED TO THE MAP
+
+
+//Which map should the pin be on?      
+//'world' -- 'sf' (Sioux Falls) -- or 'ethiopia'
+mapType:   'world',
+
+
+//Which color category?
+//'or' (Outreach) -- 'cp' (Community Partner) -- 'ip' (International partner) -- or 'lp' (Legacy Partner)
+category:   'lp',
+
+
+//Should the pin have a circle in the middle for kingdom fund?
+//'true' or 'false'
+kingdomFund:   'false',
+
+
+//Position on the map grid (see KEY files for reference - each value ranges from 0-100)
+xPosition:  '73',
+yPosition:  '57',
+
+
+//Title of the ministry
+name:   'Shayla Dick',
+
+
+//Body text (Can be multiple lines. HTML Markup tags can be used to format text, if desired)
+description:  "Shayla serves as an Architect and missionary with Engineering Ministries International (EMI) in Phnom Penh, Cambodia. EMI is a Christian non-profit made up of architects, engineers, surveyors, and construction managers who value Design, Discipleship, and Diversity. EMI’s worldwide mission is to develop people, design structures, and construct facilities which serve communities and the Church—facilities like hospitals, schools, water systems, and more. Since joining staff in 2020, Shayla has had the privilege of serving ministries such as CURE Children's Hospital of Zimbabwe with a master plan and clean water system, Bongolo Hospital in Gabon with a design for a Maternity Center, and Church of the Holy Spirit in South Africa with the construction of a new Community Center. Shayla started her journey in ministry during a Central Church Youth Group mission trip to Haiti in 2012. God used this experience in a developing country recovering from a major earthquake to reveal to Shayla the transformative power of architecture, and His desire to use her talents to build His Kingdom and restore the world through design.",
+
+
+
+//Hyperlinks to be inserted below the text (e.g. donate, or contact)
+//Links can be url's (with HTTPS) or email addresses
+//Put the text to be displayed int he
+//More can be added if needed (follow the format)
+//Leave 'EXAMPLE LINK' if not needed to be used
+links:
 [
-    ["Donate Here","https://emiworld.org/shayla-dick"],
-    ["Contact Shayla","shayla.dick@emiworld.org"]
+    ['Donate Here'  ,  'https://emiworld.org/shayla-dick'],
+    ['Contace Shayla Dick'  ,  'shayla.dick@emiworld.org'],
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL'],
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL']
 ],
-"images":
+
+
+//Large images to appear in the textbox (put the path to the file in the quotes)
+//More can be added if needed (follow the format)
+//Leave as EXAMPLE.png if not needed
+images:
 [
-    "shayla.jpg"
+    'images/shayla.jpg',
+    'images/EXAMPLE.png',
+    'images/EXAMPLE.png',
+    'images/EXAMPLE.png'
 ],
-"cornerLogo":"tti.jpg"
+
+
+
+//Small logo to appear in the corner of the panel (e.g. organization logo)
+//Leave as EXAMPLE.png if not needed
+cornerLogo:'images/EXAMPLE.png'
 
 
 }

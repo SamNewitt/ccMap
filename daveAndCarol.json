@@ -1,0 +1,68 @@
+{
+//CENTRAL MAP PIN DATA FILE TEMPLATE --- MAKE A COPY OF THIS AND FILL IN DATA
+//Everything noted by double slashes is a note. Data goes inside the quotes after the colon
+//MAKE SURE TO ADD THIS FILE TO '_PINLIST.json' SO IT IS ADDED TO THE MAP
+
+
+//Which map should the pin be on?      
+//'world' -- 'sf' (Sioux Falls) -- or 'ethiopia'
+mapType:   'world',
+
+
+//Which color category?
+//'or' (Outreach) -- 'cp' (Community Partner) -- 'ip' (International partner) -- or 'lp' (Legacy Partner)
+category:   'lp',
+
+
+//Should the pin have a circle in the middle for kingdom fund?
+//'true' or 'false'
+kingdomFund:   'false',
+
+
+//Position on the map grid (see KEY files for reference - each value ranges from 0-100)
+xPosition:  '22.5',
+yPosition:  '30.5',
+
+
+//Title of the ministry
+name:   'Dave and Carol',
+
+
+//Body text (Can be multiple lines. HTML Markup tags can be used to format text, if desired)
+description:  "David is a global worker with Converge, presently located in Minnesota with his wife Carol. He is focusing efforts in engagement with Chinese and India students that temporarily reside in the Twin Cities area as well as training volunteers who work with these students. Hospitality Center (www.hospitalitycenter.org) will be one of several agencies of cooperative work.  Access to these students is challenging.  Students here in America are the next generational, multicultural future returnees to their hometowns. We talk with them in English and encourage them to know God in their native language.",
+
+
+
+//Hyperlinks to be inserted below the text (e.g. donate, or contact)
+//Links can be url's (with HTTPS) or email addresses
+//Put the text to be displayed in the first set of quotes
+//More can be added if needed (follow the format)
+//Leave 'EXAMPLE LINK' if not needed to be used
+links:
+[
+    ['Learn more about Dave and Carol'  ,  'https://converge.org/missionary/david-j'],
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL'],
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL'],
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL']
+],
+
+
+//Large images to appear in the textbox (put the path to the file in the quotes)
+//More can be added if needed (follow the format)
+//Leave as EXAMPLE.png if not needed
+images:
+[
+    'images/daveCarol.png',
+    'images/EXAMPLE.png',
+    'images/EXAMPLE.png',
+    'images/EXAMPLE.png'
+],
+
+
+
+//Small logo to appear in the corner of the panel (e.g. organization logo)
+//Leave as EXAMPLE.png if not needed
+cornerLogo:'images/EXAMPLE.png'
+
+
+}

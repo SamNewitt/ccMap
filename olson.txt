@@ -1,0 +1,71 @@
+{
+//CENTRAL MAP PIN DATA FILE TEMPLATE --- MAKE A COPY OF THIS AND FILL IN DATA
+//Everything noted by double slashes is a note. Data goes inside the quotes after the colon
+//MAKE SURE TO ADD THIS FILE TO '_PINLIST.json' SO IT IS ADDED TO THE MAP
+
+
+//Which map should the pin be on?      
+//'world' -- 'sf' (Sioux Falls) -- or 'ethiopia'
+mapType:   'world',
+
+
+//Which color category?
+//'or' (Outreach) -- 'cp' (Community Partner) -- 'ip' (International partner) -- or 'lp' (Legacy Partner)
+category:   'lp',
+
+
+//Should the pin have a circle in the middle for kingdom fund?
+//'true' or 'false'
+kingdomFund:   'false',
+
+
+//Position on the map grid (see KEY files for reference - each value ranges from 0-100)
+xPosition:  '48',
+yPosition:  '27',
+
+
+//Title of the ministry
+name:   'Peter and Laurel Olson',
+
+
+//Body text (Can be multiple lines. HTML Markup tags can be used to format text, if desired)
+description:  "Peter and Laurel Olson have served at Black Forest Academy (BFA) since 2006. BFA, located in Kandern, Germany, is a school for students in grades 5-12. Peter teaches high school math, physics and computer science and chairs the math department at BFA while Laurel runs the admissions office. 
+
+BFA's core purpose is to help missionary families continue in the work God has given them by providing for the educational needs of their children. In Grades 9-12, students are able to participate in BFA's boarding program. Families of BFA students live and serve in over 50 different countries throughout Western & Eastern Europe, Africa, Asia, and the Middle East. 
+",
+
+
+
+//Hyperlinks to be inserted below the text (e.g. donate, or contact)
+//Links can be url's (with HTTPS) or email addresses
+//Put the text to be displayed in the first set of quotes
+//More can be added if needed (follow the format)
+//Leave 'EXAMPLE LINK' if not needed to be used
+links:
+[
+    ['Black Forest Academy'  ,  'https://bfacademy.de'],
+    ['Donate Here'  ,  'https://rceinternational.givingfuel.com/staff'],
+    ['Contact the Olsons'  ,  'LPOLSONBFA@gmail.com'],
+    ['EXAMPLE TEXT'  ,  'EXAMPLE LINK/EMAIL']
+],
+
+
+//Large images to appear in the textbox (put the path to the file in the quotes)
+//More can be added if needed (follow the format)
+//Leave as EXAMPLE.png if not needed
+images:
+[
+    'images/olson.png',
+    'images/EXAMPLE.png',
+    'images/EXAMPLE.png',
+    'images/EXAMPLE.png'
+],
+
+
+
+//Small logo to appear in the corner of the panel (e.g. organization logo)
+//Leave as EXAMPLE.png if not needed
+cornerLogo:'images/EXAMPLE.png'
+
+
+}

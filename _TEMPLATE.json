@@ -6,36 +6,36 @@
 
 //Which map should the pin be on?      
 //'world' -- 'sf' (Sioux Falls) -- or 'ethiopia'
-mapType:   '###',
+mapType:   'world',
 
 
 //Which color category?
 //'or' (Outreach) -- 'cp' (Community Partner) -- 'ip' (International partner) -- or 'lp' (Legacy Partner)
-category:   '##',
+category:   'lp',
 
 
 //Should the pin have a circle in the middle for kingdom fund?
 //'true' or 'false'
-kingdomFund:   '##',
+kingdomFund:   'false',
 
 
 //Position on the map grid (see KEY files for reference - each value ranges from 0-100)
-xPosition:  '##',
-yPosition:  '##',
+xPosition:  '17.5',
+yPosition:  '30',
 
 
 //Title of the ministry
-name:   'EXAMPLE',
+name:   'Hope Harbor',
 
 
 //Body text (Can be multiple lines. HTML Markup tags can be used to format text, if desired)
-description:  "EXAMPLE",
+description:  "",
 
 
 
 //Hyperlinks to be inserted below the text (e.g. donate, or contact)
 //Links can be url's (with HTTPS) or email addresses
-//Put the text to be displayed int he
+//Put the text to be displayed in the first set of quotes
 //More can be added if needed (follow the format)
 //Leave 'EXAMPLE LINK' if not needed to be used
 links:

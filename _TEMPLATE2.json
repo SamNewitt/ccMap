@@ -29,17 +29,13 @@ name:   'Hope Harbor',
 
 
 //Body text (Can be multiple lines. HTML Markup tags can be used to format text, if desired)
-description:  "Hope Harbor offers family-style care for teens as they heal from a variety of issues that are unfortunately commonplace for youth today. These include past abuse, trauma, anger, substance use, mental health issues, exploitation, self-harm, suicidal ideation, anxiety, attachment issues, and more. They work with ordinary kids who are healing from extraordinary things; each one a child of God, loved by the Savior.
-
-Central’s Involvement: The Kingdom Fund and Elders voted to use Central’s tithes and offerings to help Hope Harbor with innovative staff trainings and ongoing ministry costs in 2023. 
-
-How You Can Get Involved: Hope Harbor’s Parker facility is large and is always in need of all kinds of volunteers. To find out more, reach out to the Site Director Amanda Dent at <a href=mailto:amanda.dent@hopeharbormn.org>amanda.dent@hopeharbormn.org</a>",
+description:  "",
 
 
 
 //Hyperlinks to be inserted below the text (e.g. donate, or contact)
 //Links can be url's (with HTTPS) or email addresses
-//Put the text to be displayed int he
+//Put the text to be displayed in the first set of quotes
 //More can be added if needed (follow the format)
 //Leave 'EXAMPLE LINK' if not needed to be used
 links:
